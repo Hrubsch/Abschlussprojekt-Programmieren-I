@@ -16,7 +16,7 @@ class BatterySimulator:
 
     def simulate(self, current_profile: list[float], duration_profile: list[float]) -> None:
         self.voltage_profile = []
-        self.voltage_profile.append(self.battery_pack.voltage()) #warum wird das benötigt?
+        self.voltage_profile.append(self.battery_pack.voltage()) 
         
         for i, j in zip(current_profile, duration_profile):
             self.battery_pack.apply_current(i,j)
