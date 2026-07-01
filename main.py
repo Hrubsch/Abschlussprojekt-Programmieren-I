@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from Akkumodell2.battery_simulator_start import BatterySimulator
 from Akkumodell2.battery_pack_start import BatteryPack
+from Akkumodell2.Akku import lifepo
+from Akkumodell2.Akku import nmc
 
 import matplotlib.pyplot as plt
 
@@ -82,35 +84,6 @@ print(f"Maximalleistung: {P_max} ")
 df["gesamtzeit_s"] = df["dt"].fillna(0).cumsum()
 
 
-# Enwicklung des Ladezustandes des Akkus über die Fahrt
-def simulation_ladezustand(df, battery : BatteryPack = BatteryPack(capacity_nom_Ah=10, initial_soc=0.7, Vmin=32.0, Vmax=42.0)):
-    """Simulation des Ladezustands des Akkus über die Fahrt"""
-
-    df_bereinigt = df.dropna(subset=["dt"]) #ohne erste Zeile, weil keine Werte
-
-    soc_liste = []
-    soc_liste.append(battery.soc )
-
-    for i,j in df_bereinigt.iterrows():
-        dt = j["dt"]
-        I_motor = j["I_motor"]
-        battery.apply_current(I_motor, dt)
-        soc_liste.append(battery.soc ) 
-
-    df["SOC"] = soc_liste
-    return df["SOC"]
-
-def plot_ladezustand(df):
-    """ploten des Ladezustandes"""
-    fig, ax = plt.subplots()
-    ax.plot(df["gesamtzeit_s"],df["SOC"] * 100,label = "SOC(%)")
-    ax.set_xlabel("t / s")
-    ax.set_ylabel("SOC / %")
-    ax.set_title("Ladezustand des Akkus über die Zeit")
-    ax.grid()
-    ax.legend(loc="upper right")
-    plt.show()
-
 # Ergebnisse speichern
 df.to_csv("Output.csv", index=False)
 
@@ -135,5 +108,11 @@ for spalte in df.columns:
     plt.show()
 
 if __name__ == "__main__":
-    simulation_ladezustand(df)
-    plot_ladezustand(df)
+
+    b1 = lifepo(capacity_nom_cell_Ah=10.0, initial_soc=1.0)
+    b2 = nmc(capacity_nom_cell_Ah=10.0, initial_soc=1.0)
+    simulatorb1 = BatterySimulator(b1)
+    simulatorb2 = BatterySimulator(b2)
+
+    simulatorb1.simulation_ladezustand(df)
+    simulatorb1.plot_ladezustand(df)
