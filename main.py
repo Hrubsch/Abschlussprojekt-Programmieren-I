@@ -102,12 +102,11 @@ def haversine(lat1, lon1, lat2, lon2):
     df["SOC"] = soc_liste
     return df["SOC"]
 
-def glaette_gps(df, sigma=3):
+def glaette_gps(df):
     df = df.copy()
-
-    df["lat_glatt"] = gaussian_filter1d(df["lat"], sigma=sigma)
-    df["lon_glatt"] = gaussian_filter1d(df["lon"], sigma=sigma)
-
+    df["lat_glatt"] = df["lat"].rolling(window=10).mean()
+    df["lon_glatt"] = df["lon"].rolling(window=10).mean()
+    df["ele_glatt"] = df["ele"].rolling(window=10).mean()
     return df
 
 
@@ -122,10 +121,11 @@ if __name__ == "__main__":
     m_konst = 1.5               # Motorkonstante Nm/A
 
     df = pd.read_csv("final_project_input_data.csv", sep=";") # Einlesen der CSV-Datei
-
+    df = glaette_gps(df)
+    
     df["time"] = pd.to_datetime(df["time"])
     df["time_s"] = (df["time"] - df["time"].iloc[0]).dt.total_seconds()
-    df = glaette_gps(df, sigma=3)
+
 
     df["ds"] = haversine(
         df["lat_glatt"].shift(),
@@ -137,22 +137,23 @@ if __name__ == "__main__":
   
 
     df["dt"] = df["time_s"].diff() # Zeitdifferenz
-    
+
     df["v"] = df["ds"] / df["dt"] # Geschwindigkeit
     df.loc[0, "v"] = 0 # erste Zeile korrigieren
-    df.loc[df["v"] > 30, "v"] = np.nan
-    df["v"] = df["v"].interpolate()
+    df.loc[df["v"] > 30, "v"] = np.nan # Geschwindigkeit > 30 m/s löschen
+    df["v"] = df["v"].interpolate() # fehlende Werte interpolieren
     df["v"] = (df["v"].rolling(window=6, center=True, min_periods=1).mean()) # Glättung der Geschwindigkeit
+
     df["a"] = np.gradient(df["v"], df["time_s"])
     df.loc[0, "a"] = 0 # erste Zeile korrigieren
-    df.loc[df["a"] > 2, "a"] = np.nan
-    df.loc[df["a"] < -2, "a"] = np.nan
+    df.loc[df["a"] > 2, "a"] = np.nan # Beschleunigung > 2 m/s² löschen
+    df.loc[df["a"] < -2, "a"] = np.nan # Beschleunigung < -2 m/s² löschen
     df["a"] = df["a"].interpolate()
 
 
 
     #df["a"] = df["v"].diff() / df["dt"] # Beschleunigung
-    df["dh"] = df["ele"].diff() # Höhenänderung
+    df["dh"] = df["ele_glatt"].diff() # Höhenänderung
     df["phi_rad"] = np.arctan2(df["dh"], df["ds"]) # Steigungswinkel
     df["phi_grad"] = np.degrees(df["phi_rad"]) # Steigungswinkel in Grad
     df["F_D"] = 0.5 * rho * A * df["v"]**2 # Luftwiderstand
