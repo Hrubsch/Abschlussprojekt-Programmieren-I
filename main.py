@@ -143,17 +143,19 @@ if __name__ == "__main__":
     df = df[df["dt"] >= 1].copy()
     df["s"] = df["ds"].cumsum()
     df["v"] = np.gradient(df["s"], df["time_s"])
-    #df["v"] = df["ds"] / df["dt"] # Geschwindigkeit
-    #df.loc[0, "v"] = 0 # erste Zeile korrigieren
-    #df.loc[df["v"] > 30, "v"] = np.nan # Geschwindigkeit > 30 m/s löschen
-    #df["v"] = df["v"].interpolate() # fehlende Werte interpolieren
-    #df["v"] = (df["v"].rolling(window=6, center=True, min_periods=1).mean()) # Glättung der Geschwindigkeit
+    #df["v"] = df["v"].rolling(window=6, center=True, min_periods=1).mean() # Glättung der Geschwindigkeit
+    df["v"] = df["ds"] / df["dt"] # Geschwindigkeit
+    df.loc[0, "v"] = 0 # erste Zeile korrigieren
+    df.loc[df["v"] > 30, "v"] = np.nan # Geschwindigkeit > 30 m/s löschen
+    df["v"] = df["v"].interpolate() # fehlende Werte interpolieren
+    df["v"] = (df["v"].rolling(window=6, center=True, min_periods=1).mean()) # Glättung der Geschwindigkeit
 
     df["a"] = np.gradient(df["v"], df["time_s"])
-    #df.loc[0, "a"] = 0 # erste Zeile korrigieren
-    #df.loc[df["a"] > 2, "a"] = np.nan # Beschleunigung > 2 m/s² löschen
-    #df.loc[df["a"] < -2, "a"] = np.nan # Beschleunigung < -2 m/s² löschen
-    #df["a"] = df["a"].interpolate()
+    #df["a"] = df["a"].rolling(window=6, center=True, min_periods=1).mean() # Glättung der Beschleunigung
+    df.loc[0, "a"] = 0 # erste Zeile korrigieren
+    df.loc[df["a"] > 2, "a"] = np.nan # Beschleunigung > 2 m/s² löschen
+    df.loc[df["a"] < -2, "a"] = np.nan # Beschleunigung < -2 m/s² löschen
+    df["a"] = df["a"].interpolate()
 
 
 
