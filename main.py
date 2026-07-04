@@ -50,39 +50,6 @@ def haversine(lat1, lon1, lat2, lon2):
     d = R * c
     return d
 
-#def glaette_gps(df, window=5):
-    """
-    Glättet die GPS-Koordinaten mittels gleitendem Mittelwert.
-
-    Parameter:
-        df : pandas.DataFrame
-            DataFrame mit den Spalten 'lat' und 'lon'
-        window : int
-            Fenstergröße der Glättung (ungerade Zahl empfohlen)
-
-    Rückgabe:
-        DataFrame mit den zusätzlichen Spalten
-        'lat_glatt' und 'lon_glatt'
-    """
-
-    df = df.copy()
-
-    df["lat_glatt"] = (
-        df["lat"]
-        .rolling(window=window, center=True, min_periods=1)
-        .mean()
-    )
-
-    df["lon_glatt"] = (
-        df["lon"]
-        .rolling(window=window, center=True, min_periods=1)
-        .mean()
-    )
-
-    return df
-
-
-
 # Enwicklung des Ladezustandes des Akkus über die Fahrt
 #def simulation_ladezustand(df, battery : BatteryPack = BatteryPack(capacity_nom_Ah=10, initial_soc=0.7, Vmin=32.0, Vmax=42.0)):
     """Simulation des Ladezustands des Akkus über die Fahrt"""
