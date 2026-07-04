@@ -110,16 +110,29 @@ def glaette_gps(df):
     df["ele_glatt"] = df["ele"].rolling(window=10).mean()
     return df
 
+def luftdruck_berechnung(rho_0, M, g, R, temp, h):
+
+    T = temp + 273.15  # Umrechnung von °C in Kelvin
+    rho = rho_0 * np.exp((-M * g * h) / (R * T))
+    return rho
 
 
 if __name__ == "__main__":
     g = 9.81
-    rho = 1.225              # Luftdichte
+    #rho = 1.225                # Luftdichte
     A = 0.5625                  # Produkt Stirnfläche, cw-Wert
-    m = 80                  # Masse Fahrrad + Fahrer
+    m = 80                      # Masse Fahrrad + Fahrer
     r_inch = 27                 # Raddurchmesser in inch
-    r_m = r_inch * 0.0254        # Raddurchmesser in mm
+    r_m = r_inch * 0.0254       # Raddurchmesser in mm
     m_konst = 1.5               # Motorkonstante Nm/A
+    rho_0 = 1.225               # Luftdichte auf Meereshöhe (ca. 1,225 kg/m³)
+    M = 0.02896                 # Molare Masse der Luft (≈ 0,02896 kg/mol)
+    g = 9.81                    # Erdbeschleunigung (≈ 9,81 m/s²)
+    R = 8.314                   # Universelle Gaskonstante (\(8{,}314 \text{ J/(mol}\cdot\text{K)}\))
+    T = 273.15                  # Absolute Temperatur in Kelvin (T in °C + 273,15)
+
+
+
 
     df = pd.read_csv("final_project_input_data.csv", sep=";") # Einlesen der CSV-Datei
     df = glaette_gps(df)
@@ -139,12 +152,10 @@ if __name__ == "__main__":
 
   
 
-    df["dt"] = df["time_s"].diff() # Zeitdifferenz
-    df = df[df["dt"] >= 1].copy()
-    df["s"] = df["ds"].cumsum()
+    df["dt"] = df["time_s"].diff()  # Zeitdifferenz
+    df = df[df["dt"] >= 1].copy()   # Zeilen mit dt < 1 Sekunde entfernen
 
-    #df["v"] = np.gradient(df["s"], df["time_s"])
-    #df["v"] = df["v"].rolling(window=6, center=True, min_periods=1).mean() # Glättung der Geschwindigkeit
+    df["s"] = df["ds"].cumsum()     # zurückgelegte Strecke
 
     df["v"] = df["ds"] / df["dt"] # Geschwindigkeit
     df.loc[df["v"] > 30, "v"] = np.nan # Geschwindigkeit > 30 m/s löschen
@@ -158,25 +169,32 @@ if __name__ == "__main__":
     df["a"] = df["a"].rolling(window=25, center=True, min_periods=1).mean() # Glättung der Beschleunigung
 
 
+    df["dh"] = df["ele_glatt"].diff()                                                               # Höhenänderung
+    df["phi_rad"] = np.arctan2(df["dh"], df["ds"])                                                  # Steigungswinkel
+    
+    df.loc[df["phi_rad"] < -0.174533, "phi_rad"] = np.nan                                           # Winkel < -10° löschen
+    df["phi_rad"] = df["phi_rad"].interpolate()                                                     # fehlende Werte interpolieren
+    df["phi_rad"] = df["phi_rad"].rolling(window=25, center=True, min_periods=1).mean()             # Glättung des Steigungswinkels
+    df["phi_grad"] = np.degrees(df["phi_rad"])                                                      # Steigungswinkel in Grad
+    
+    df["rho"] = luftdruck_berechnung(rho_0, M, g, R, T, df["ele_glatt"])                                     # Luftdichte in Abhängigkeit der Höhe
 
-    #df["a"] = df["v"].diff() / df["dt"] # Beschleunigung
-    df["dh"] = df["ele_glatt"].diff()                   # Höhenänderung
-    df["phi_rad"] = np.arctan2(df["dh"], df["ds"])      # Steigungswinkel
-    df.loc[df["phi_rad"] < -0.174533, "phi_rad"] = np.nan # Beschleunigung > 2 m/s² löschen
-    df["phi_rad"] = df["phi_rad"].interpolate() # fehlende Werte interpolieren
-    df["phi_rad"] = df["phi_rad"].rolling(window=25, center=True, min_periods=1).mean() # Glättung des Steigungswinkels
-    df["phi_grad"] = np.degrees(df["phi_rad"])          # Steigungswinkel in Grad
-    df["F_D"] = 0.5 * rho * A * df["v"]**2              # Luftwiderstand
-    df["F_H"] = (m * g) * np.sin(df["phi_rad"])         # Hangkraft
-    df["F_A"] = m * df["a"]                             # Beschleunigungskraft
-    df["F_Antrieb"] = df["F_D"] + df["F_H"] + df["F_A"] # Gesamte Antriebskraft
-    df["F_Antrieb"] = df["F_Antrieb"].rolling(window=25, center=True, min_periods=1).mean() # Glättung der Antriebskraft
-    df["P"] = df["F_Antrieb"] * df ["v"]                # Berechnung der Leistung
-    df["P"] = df["P"].rolling(window=25, center=True, min_periods=1).mean() # Glättung der Leistung
-    df["T_drehmoment"] = df["F_Antrieb"] * (r_m/2)      # Berechnung Drehmoment am Motor in Nm
-    df["T_drehmoment"] = df["T_drehmoment"].rolling(window=25, center=True, min_periods=1).mean() # Glättung des Drehmoments
-    df["I_motor"] = df["T_drehmoment"] / m_konst        # Berechnung Motorstrom bei bekannter Motorkonstante
-    df["I_motor"] = df["I_motor"].rolling(window=25, center=True, min_periods=1).mean() # Glättung des Motorstroms   
+    df["F_D"] = 0.5 * df["rho"] * A * df["v"]**2                                                          # Luftwiderstand
+    df["F_H"] = (m * g) * np.sin(df["phi_rad"])                                                     # Hangkraft
+    
+    df["F_A"] = m * df["a"]                                                                         # Beschleunigungskraft
+    
+    df["F_Antrieb"] = df["F_D"] + df["F_H"] + df["F_A"]                                             # Gesamte Antriebskraft
+    df["F_Antrieb"] = df["F_Antrieb"].rolling(window=25, center=True, min_periods=1).mean()         # Glättung der Antriebskraft
+    
+    df["P"] = df["F_Antrieb"] * df ["v"]                                                            # Berechnung der Leistung
+    df["P"] = df["P"].rolling(window=25, center=True, min_periods=1).mean()                         # Glättung der Leistung
+    
+    df["T_drehmoment"] = df["F_Antrieb"] * (r_m/2)                                                  # Berechnung Drehmoment am Motor in Nm
+    df["T_drehmoment"] = df["T_drehmoment"].rolling(window=25, center=True, min_periods=1).mean()   # Glättung des Drehmoments
+    
+    df["I_motor"] = df["T_drehmoment"] / m_konst                                                    # Berechnung Motorstrom bei bekannter Motorkonstante
+    df["I_motor"] = df["I_motor"].rolling(window=25, center=True, min_periods=1).mean()             # Glättung des Motorstroms   
 
 
     b1 = lifepo(capacity_nom_cell_Ah=10.0, initial_soc=1.0)
