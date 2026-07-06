@@ -1,6 +1,6 @@
-from .battery_pack_start import BatteryPack
+from battery_pack_start import BatteryPack
 import matplotlib.pyplot as plt
-from .plotting_utils import (
+from plotting_utils import (
     plot_current_profile,
     plot_voltage_profile,
     plot_voltage_and_current_profile,
@@ -11,6 +11,7 @@ class BatterySimulator:
 
     def __init__(self, battery_pack: BatteryPack) -> None:
         self.voltage_profile = []
+        self.soc_liste = []
         self.battery_pack = battery_pack
 
     def simulate(self, current_profile: list[float], duration_profile: list[float]) -> None:
@@ -24,27 +25,27 @@ class BatterySimulator:
 
     
     # Enwicklung des Ladezustandes des Akkus über die Fahrt
-    def simulation_ladezustand(self, df , battery : BatteryPack = BatteryPack()):
+    def simulation_ladezustand(self, df ):
         """Simulation des Ladezustands des Akkus über die Fahrt"""
 
-        df_bereinigt = df.dropna(subset=["dt"]) #ohne erste Zeile, weil keine Werte
+        #df_bereinigt = df.dropna(subset=["dt"]).copy() #ohne erste Zeile, weil keine Werte
 
-        soc_liste = []
-        soc_liste.append(battery.soc )
+        self.soc_liste = []
+        #self.soc_liste.append(self.battery_pack.soc )
 
-        for i,j in df_bereinigt.iterrows():
+        for i,j in df.iterrows():
             dt = j["dt"]
             I_motor = j["I_motor"]
-            battery.apply_current(I_motor, dt)
-            soc_liste.append(battery.soc ) 
+            self.battery_pack.apply_current(I_motor, dt)
+            self.soc_liste.append(self.battery_pack.soc ) 
 
-        df["SOC"] = soc_liste
-        return df["SOC"]
+        #df["SOC"] = soc_liste
+        return self.soc_liste
 
     def plot_ladezustand(self, df):
         """ploten des Ladezustandes"""
         fig, ax = plt.subplots()
-        ax.plot(df["Gesamtzeit"],df["SOC"] * 100,label = "SOC(%)")
+        ax.plot(df["time_s"],df["SOC"] * 100,label = "SOC(%)")
         ax.set_xlabel("t / s")
         ax.set_ylabel("SOC / %")
         ax.set_title("Ladezustand des Akkus über die Zeit")

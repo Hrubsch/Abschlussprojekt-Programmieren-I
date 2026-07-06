@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
-from Akkumodell2.battery_simulator_start import BatterySimulator
-from Akkumodell2.battery_pack_start import BatteryPack
-from Akkumodell2.Akku import lifepo
-from Akkumodell2.Akku import nmc
+from battery_simulator_start import BatterySimulator
+from battery_pack_start import BatteryPack
+from Akku import lifepo
+from Akku import nmc
 
 
 import matplotlib.pyplot as plt
@@ -179,12 +179,15 @@ if __name__ == "__main__":
     df["I_motor"] = df["I_motor"].rolling(window=25, center=True, min_periods=1).mean() # Glättung des Motorstroms   
 
 
-    b1 = lifepo(capacity_nom_cell_Ah=10.0, initial_soc=1.0)
-    b2 = nmc(capacity_nom_cell_Ah=10.0, initial_soc=1.0)
+
+
+    b1 = lifepo(capacity_nom_cell_Ah=20.0, initial_soc=1.0)
+    b2 = nmc(capacity_nom_cell_Ah=20.0, initial_soc=1.0)
     simulatorb1 = BatterySimulator(b1)
     simulatorb2 = BatterySimulator(b2)
 
-    simulatorb1.simulation_ladezustand(df)
+    soc_liste = simulatorb1.simulation_ladezustand(df)
+    df["SOC"] = soc_liste
     simulatorb1.plot_ladezustand(df)
 
 
