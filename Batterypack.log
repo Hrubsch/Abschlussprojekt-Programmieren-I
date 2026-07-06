@@ -1,0 +1,25 @@
+2026-07-06 20:02:39,238:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-06 20:02:39,238:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-06 20:02:43,116:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-06 20:02:43,116:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-06 20:02:43,116:INFO: Starte Simulation des Ladezustands
+2026-07-06 20:02:43,117:INFO: Simulation beendet. 4 Werte verarbeitet.
+2026-07-06 20:02:43,119:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-06 20:02:43,120:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-06 20:02:43,120:INFO: Starte Simulation des Ladezustands
+2026-07-06 20:02:43,125:WARNING: Batterie ist vollständig entladen!
+2026-07-06 20:02:43,125:WARNING: Batterie ist vollständig entladen!
+2026-07-06 20:02:43,125:WARNING: Batterie ist vollständig entladen!
+2026-07-06 20:02:43,125:INFO: Simulation beendet. 3 Werte verarbeitet.
+2026-07-06 20:02:43,128:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-06 20:02:43,128:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-06 20:02:43,128:INFO: Starte Simulation des Ladezustands
+2026-07-06 20:02:43,129:INFO: Batterie ist vollständig geladen.
+2026-07-06 20:02:43,129:INFO: Batterie ist vollständig geladen.
+2026-07-06 20:02:43,129:INFO: Simulation beendet. 2 Werte verarbeitet.
+2026-07-06 20:02:43,133:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-06 20:02:43,133:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-06 20:02:43,133:INFO: Starte Simulation des Ladezustands
+2026-07-06 20:02:43,133:WARNING: [Zeile 1] Negativer Zeitschritt dt=-5.0 erkannt. Überspringe Schritt.
+2026-07-06 20:02:43,134:ERROR: [Zeile 3] Ungültiger Datentyp in den Daten: '<' not supported between instances of 'str' and 'int'. Zeile übersprungen.
+2026-07-06 20:02:43,134:INFO: Simulation beendet. 4 Werte verarbeitet.
