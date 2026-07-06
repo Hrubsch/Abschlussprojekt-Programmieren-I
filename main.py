@@ -5,6 +5,7 @@ from battery_simulator_start import BatterySimulator
 from battery_pack_start import BatteryPack
 from Akku import lifepo
 from Akku import nmc
+import matplotlib.collections as mcollections
 
 
 import matplotlib.pyplot as plt
@@ -335,3 +336,48 @@ if __name__ == "__main__":
     else:
         print("Keine gültigen GPS-Daten zum Plotten der Karte vorhanden.")
 
+    # höhenprofil ploten
+    # Daten vorbereiten (X: Distanz in km, Y: geglättete Höhe in m)
+    x = df["s"] / 1000  # Umrechnung von Meter in Kilometer
+    y = df["ele_glatt"]
+
+    # Steigung in Prozent berechnen: (dh / ds) * 100
+    steigung = np.tan(df["phi_rad"]) * 100
+
+    # egmente für die LineCollection erstellen
+    points = np.array([x, y]).T.reshape(-1, 1, 2)
+    segments = np.concatenate([points[:-1], points[1:]], axis=1)
+
+    fig, ax = plt.subplots()
+
+    # Farbkarte definieren (Coolwarm wechselt von Blau zu Weiß zu Rot)
+    cmap = plt.get_cmap('coolwarm')
+    norm = plt.Normalize(vmin=-15, vmax=15)  # -15% bis +15%
+
+    # LineCollection erstellen und hinzufügen
+    lc = mcollections.LineCollection(segments, cmap=cmap, norm=norm, linewidths=3.5)
+    lc.set_array(steigung)
+    line = ax.add_collection(lc)
+
+    # Achsen-Limits
+    ax.set_xlim(0, 95)
+    ax.set_ylim(450, 900)
+
+    # Achsen-Ticks definieren
+    ax.set_xticks(np.arange(0, 96, 5))
+    ax.set_yticks(np.arange(500, 801, 100))
+
+    ax.set_xlabel("Distanz / km", fontsize=12)
+    ax.set_ylabel("Höhe / m", fontsize=12)
+
+    # Ticks größer und sauberer darstellen
+    ax.tick_params(axis='both', which='major', labelsize=11)
+
+    # Colorbar (Farbskala) hinzufügen
+    cbar = fig.colorbar(line, ax=ax, shrink=0.75, pad=0.02)
+    cbar.set_label("Steigung / %", fontsize=12)
+    cbar.set_ticks([-10, 0, 10])
+    cbar.ax.tick_params(labelsize=11)
+    
+    plt.savefig("hoehenprofil_steigung.png")
+    plt.show()
