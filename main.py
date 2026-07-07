@@ -6,11 +6,14 @@ from battery_pack_start import BatteryPack
 from Akku import lifepo
 from Akku import nmc
 import matplotlib.collections as mcollections
+import logging
 
 
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 from datetime import datetime
+
+logging.basicConfig(format="%(asctime)s:%(levelname)s: %(message)s", level=logging.INFO, filename="Main.log")
 
 def Kenngroessen(df):
     # Maximalleistung
@@ -85,6 +88,76 @@ def luftdruck_berechnung(rho_0, M, g, R, temp, h):
     rho = rho_0 * np.exp((-M * g * h) / (R * T))
     return rho
 
+def hoehenprofil_steigung(df : pd.DataFrame)-> None:
+    """
+    Erstellt ein farbcodiertes Höhenprofil basierend auf der Steigung und speichert es als PNG.
+    """
+    
+    try:
+        # Prüfen, ob die absolut notwendigen Spalten überhaupt im DataFrame existieren
+        erforderliche_spalten = ["s_orig", "ele_glatt", "phi_rad"]
+        for spalte in erforderliche_spalten:
+            if spalte not in df.columns:
+                raise KeyError(f"Die erforderliche Spalte '{spalte}' fehlt im DataFrame.")
+            
+        # Prüfen, ob DataFrame gefüllt ist mit Werten
+        if df.empty:
+            logging.warning("Plotten des Höhenprofils abgebrochen: Keine gültigen Daten vorhanden.")
+            print("Plotten des Höhenprofils abgebrochen: Keine gültigen Daten vorhanden.")
+            return
+        
+        # Daten vorbereiten (X: Distanz in km, Y: geglättete Höhe in m)
+        x = df["s_orig"] / 1000  # Umrechnung von Meter in Kilometer
+        y = df["ele_glatt"]
+
+        # Steigung in Prozent berechnen:
+        steigung = np.tan(df["phi_rad"]) * 100
+
+        # segmente für die LineCollection erstellen
+        points = np.array([x, y]).T.reshape(-1, 1, 2)
+        segments = np.concatenate([points[:-1], points[1:]], axis=1)
+
+        fig, ax = plt.subplots(figsize=(10, 5))
+
+        # Farbkarte definieren (Coolwarm wechselt von Blau zu Weiß zu Rot)
+        cmap = plt.get_cmap('coolwarm')
+        norm = plt.Normalize(vmin=-15, vmax=15)  # -15% bis +15%
+
+        # LineCollection erstellen und hinzufügen
+        lc = mcollections.LineCollection(segments, cmap=cmap, norm=norm, linewidths=3.5)
+        lc.set_array(steigung)
+        line = ax.add_collection(lc)
+
+        # Achsen-Limits
+        ax.set_xlim(0, 95)
+        ax.set_ylim(450, 900)
+
+        # Achsen-Ticks definieren
+        ax.set_xticks(np.arange(0, 96, 5))
+        ax.set_yticks(np.arange(500, 801, 100))
+
+        ax.set_xlabel("Distanz / km")
+        ax.set_ylabel("Höhe / m")
+
+        # Ticks größer und sauberer darstellen
+        ax.tick_params(axis='both', which='major')
+
+        # Colorbar (Farbskala) hinzufügen
+        cbar = fig.colorbar(line, ax=ax)
+        cbar.set_label("Steigung / %")
+        cbar.set_ticks([-10, 0, 10])
+
+        plt.tight_layout() # Verhindert abgeschnittene Ränder im PNG
+        plt.savefig("hoehenprofil_steigung.png")
+        plt.close() # schließt das Fenster
+        logging.info("Höhenprofil erfolgreich generiert und gespeichert.")
+
+    except KeyError as ke:
+        logging.error(f"Datenfehler in hoehenprofil_steigung: {ke}")
+    except ValueError as ve:
+        logging.error(f"Berechnungsfehler in hoehenprofil_steigung: {ve}. Überprüfe, ob Daten leere Werte (NaNs) enthalten.")
+    except Exception as e:
+        logging.error(f"Unerwarteter Fehler bei der Diagrammerstellung: {e}", exc_info=True)
 
 if __name__ == "__main__":
     g = 9.81
@@ -343,46 +416,4 @@ if __name__ == "__main__":
         print("Keine gültigen GPS-Daten zum Plotten der Karte vorhanden.")
 
     # höhenprofil ploten
-    # Daten vorbereiten (X: Distanz in km, Y: geglättete Höhe in m)
-    x = df["s_orig"] / 1000  # Umrechnung von Meter in Kilometer
-    y = df["ele_glatt"]
-
-    # Steigung in Prozent berechnen:
-    steigung = np.tan(df["phi_rad"]) * 100
-
-    # segmente für die LineCollection erstellen
-    points = np.array([x, y]).T.reshape(-1, 1, 2)
-    segments = np.concatenate([points[:-1], points[1:]], axis=1)
-
-    fig, ax = plt.subplots()
-
-    # Farbkarte definieren (Coolwarm wechselt von Blau zu Weiß zu Rot)
-    cmap = plt.get_cmap('coolwarm')
-    norm = plt.Normalize(vmin=-15, vmax=15)  # -15% bis +15%
-
-    # LineCollection erstellen und hinzufügen
-    lc = mcollections.LineCollection(segments, cmap=cmap, norm=norm, linewidths=3.5)
-    lc.set_array(steigung)
-    line = ax.add_collection(lc)
-
-    # Achsen-Limits
-    ax.set_xlim(0, 95)
-    ax.set_ylim(450, 900)
-
-    # Achsen-Ticks definieren
-    ax.set_xticks(np.arange(0, 96, 5))
-    ax.set_yticks(np.arange(500, 801, 100))
-
-    ax.set_xlabel("Distanz / km")
-    ax.set_ylabel("Höhe / m")
-
-    # Ticks größer und sauberer darstellen
-    ax.tick_params(axis='both', which='major')
-
-    # Colorbar (Farbskala) hinzufügen
-    cbar = fig.colorbar(line, ax=ax)
-    cbar.set_label("Steigung / %")
-    cbar.set_ticks([-10, 0, 10])
- 
-    
-    plt.savefig("hoehenprofil_steigung.png")
+    hoehenprofil_steigung(df)

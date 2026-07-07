@@ -149,3 +149,49 @@
 2026-07-07 15:03:26,254:INFO: Starte Simulation des Ladezustands
 2026-07-07 15:03:26,257:INFO: Batterie ist vollständig geladen.
 2026-07-07 15:03:26,328:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-07 19:27:51,787:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:27:51,788:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:27:51,788:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:27:51,788:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:27:51,788:INFO: Starte Simulation des Ladezustands
+2026-07-07 19:27:51,800:INFO: Batterie ist vollständig geladen.
+2026-07-07 19:27:51,886:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-07 19:29:46,894:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:29:46,894:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:29:46,894:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:29:46,894:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:29:46,894:INFO: Starte Simulation des Ladezustands
+2026-07-07 19:29:46,897:INFO: Batterie ist vollständig geladen.
+2026-07-07 19:29:46,937:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-07 19:41:08,582:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:41:08,582:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:41:08,582:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:41:08,582:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:41:08,582:INFO: Starte Simulation des Ladezustands
+2026-07-07 19:41:08,585:INFO: Batterie ist vollständig geladen.
+2026-07-07 19:41:08,627:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-07 19:41:12,198:INFO: Starte Generierung des Höhenprofils
+2026-07-07 19:42:07,555:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:42:07,555:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:42:07,555:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:42:07,555:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:42:07,555:INFO: Starte Simulation des Ladezustands
+2026-07-07 19:42:07,557:INFO: Batterie ist vollständig geladen.
+2026-07-07 19:42:07,599:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-07 19:42:11,114:INFO: Starte Generierung des Höhenprofils
+2026-07-07 19:43:03,470:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:43:03,471:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:43:03,471:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:43:03,471:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:43:03,471:INFO: Starte Simulation des Ladezustands
+2026-07-07 19:43:03,474:INFO: Batterie ist vollständig geladen.
+2026-07-07 19:43:03,512:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-07 19:43:06,913:INFO: Starte Generierung des Höhenprofils
+2026-07-07 19:48:56,707:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:48:56,707:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 19:48:56,708:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:48:56,708:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 19:48:56,708:INFO: Starte Simulation des Ladezustands
+2026-07-07 19:48:56,710:INFO: Batterie ist vollständig geladen.
+2026-07-07 19:48:56,753:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-07 19:49:00,414:INFO: Höhenprofil erfolgreich generiert und gespeichert.
