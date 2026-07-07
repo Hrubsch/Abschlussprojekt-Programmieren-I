@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 from datetime import datetime
 
+from LaTeX import create_latex_report
 logging.basicConfig(format="%(asctime)s:%(levelname)s: %(message)s", level=logging.INFO, filename="Main.log")
 
 def Kenngroessen(df):
@@ -427,8 +428,6 @@ if __name__ == "__main__":
     df.to_csv("Output.csv", index=False)
 
 
-
-
     for spalte in df.columns:
         if spalte in ["lat", "lon", "time", "ele", "ele_glatt", "ds", "dt", "dh","F_D", "F_H", "F_A", "F_R", "F_Antrieb", "temp", "phi_rad", "lat_glatt", "lon_glatt", "time_s"]:
             continue
@@ -460,6 +459,7 @@ if __name__ == "__main__":
         plt.savefig(f"{spalte}.png", dpi=300, bbox_inches="tight")
         plt.close()
 
+create_latex_report(results, filename="Auswertung", title="Auswertung der Fahrraddaten")
 
     #Ploten der Strecke auf einer Karte
     PlotStreckeAufKarte(df)
