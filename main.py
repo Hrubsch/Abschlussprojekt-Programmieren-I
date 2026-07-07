@@ -230,61 +230,10 @@ if __name__ == "__main__":
 
     #Ploten der Strecke auf einer Karte
     # NaN-Werte aus den geglätteten Koordinaten entfernen, da folium diese nicht verarbeiten kann
-    df_map = df.dropna(subset=["lat_glatt", "lon_glatt"])
-
-    if not df_map.empty:
-        # Startpunkt für die Zentrierung der Karte festlegen
-        start_lat = df_map["lat_glatt"].iloc[0]
-        start_lon = df_map["lon_glatt"].iloc[0]
-        
-        # Endpunkt für die Markierung
-        end_lat = df_map["lat_glatt"].iloc[-1]
-        end_lon = df_map["lon_glatt"].iloc[-1]
-
-        # Karte initialisieren (OpenStreetMap als Standard)
-        karte = folium.Map(location=[start_lat, start_lon], zoom_start=14)
-
-        # Koordinaten-Paare für die Linie (PolyLine) vorbereiten
-        koordinaten = list(zip(df_map["lat_glatt"], df_map["lon_glatt"]))
-
-        # Die gefahrene Strecke als rote Linie auf der Karte einzeichnen
-        folium.PolyLine(
-            locations=koordinaten, 
-            color="red", 
-            weight=4, 
-            opacity=0.8,
-            tooltip="Gefahrene Strecke"
-        ).add_to(karte)
-
-        # Start- und Zielmarker hinzufügen
-        folium.Marker(
-            [start_lat, start_lon], 
-            popup="Start", 
-            icon=folium.Icon(color="green", icon="play")
-        ).add_to(karte)
-        
-        folium.Marker(
-            [end_lat, end_lon], 
-            popup="Ziel", 
-            icon=folium.Icon(color="red", icon="stop")
-        ).add_to(karte)
-
-        # Karte als HTML-Datei speichern
-        karte.save("strecken_karte.html")
-        print("Interaktive Karte wurde als 'strecken_karte.html' gespeichert.")
-    else:
-        print("Keine gültigen GPS-Daten zum Plotten der Karte vorhanden.")
-
-
-
-
-
-    #Ploten der Strecke auf einer Karte
-    # NaN-Werte aus den geglätteten Koordinaten entfernen, da folium diese nicht verarbeiten kann
     df_map_glatt = df.dropna(subset=["lat_glatt", "lon_glatt"])
     df_map_orig = df.dropna(subset=["lat", "lon"])
 
-    if not df_map.empty:
+    if not df_map_glatt.empty and not df_map_orig.empty:
         # Startpunkt für die Zentrierung der Karte festlegen
         start_lat = df_map_orig["lat"].iloc[0]
         start_lon = df_map_orig["lon"].iloc[0]
