@@ -6,8 +6,9 @@ from battery_pack_start import BatteryPack
 from Akku import lifepo
 from Akku import nmc
 import matplotlib.collections as mcollections
+from geopy.geocoders import Nominatim
+import time
 import logging
-
 
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
@@ -218,6 +219,73 @@ def hoehenprofil_steigung(df : pd.DataFrame)-> None:
     except Exception as e:
         logging.error(f"Unerwarteter Fehler bei der Diagrammerstellung: {e}", exc_info=True)
 
+def get_ort(lat, lon):
+    """Wandelt Breitengrad und Längengrad in eine lesbare Adresse um."""
+    try:
+        # Ein eindeutiger user_agent ist für den Nominatim-Dienst zwingend erforderlich
+        geolocator = Nominatim(user_agent="abschlussprojekt_ebike_tour_simulator")
+        location = geolocator.reverse((lat, lon), timeout=10)
+        if location: # true wenn location erkannt wird
+            address = location.raw.get("address", {})
+            # Versuche den Stadtnamen oder das Dorf zu erkennen, erkennd kleinste urbane Einheit 
+            ort = address.get("village") or address.get("town") or address.get("city") or address.get("suburb")
+            # Falls kein spezifischer Ort gefunden wurde, nimm die formatierte Adresse
+            return ort if ort else location.address
+        return "Unbekannter Ort"
+    except Exception as e:
+        return f"Fehler bei der Abfrage ({e})"
+
+def reverse_goecoding(df : pd.DataFrame) -> list[str]:
+    """Ermitteln der durchfahrenen Orte und ausgabe als Liste von str"""
+    # Prüfen, ob die absolut notwendigen Spalten überhaupt im DataFrame existieren
+    erforderliche_spalten = ["s_orig", "lat", "lon", "ele"]
+    for spalte in erforderliche_spalten:
+        if spalte not in df.columns:
+            raise KeyError(f"Die erforderliche Spalte '{spalte}' fehlt im DataFrame.")
+            
+    # Prüfen, ob DataFrame gefüllt ist mit Werten
+    if df.empty:
+        logging.warning("Reverse Geocoding abgebrochen: Keine gültigen GPS-Daten vorhanden.")
+        print("Reverse Geocoding abgebrochen: Keine gültigen GPS-Daten vorhanden.")
+        return
+
+    orte = [] 
+    letzter_ort = None
+    
+    # Berechnung der Schrittweite. Wenn // <30 dann schrittweite größer => ungenauer. Wenn // >30 dann schrittweite kleiner => genauer
+    schrittweite = max(1, len(df) // 30) # Schrittweite ca. 76
+    
+    print("Ermittle Orte entlang der Strecke...")
+    logging.info(f"Starte Reverse Geocoding mit {len(df)} Zeilen. Schrittweite: {schrittweite}")
+
+    for idx in range(0, len(df), schrittweite):
+        try:
+            row = df.iloc[idx]
+
+            # Überspringe Zeilen mit NaN-Werten
+            if pd.isna(row["s_orig"]) or pd.isna(row["lat"]) or pd.isna(row["lon"]):
+                continue
+            
+            # API abfragen
+            ort = get_ort(row["lat"], row["lon"])
+            
+            # Warte 1 Sekunde, um den Fehler 429 (zu viele Anfragen) zu vermeiden
+            time.sleep(1) # durch Warten dauert Funktion ca. 31 sek.
+
+            # Speichern, wenn ein Ort gefunden wurde und er neu ist
+            if ort and ort != letzter_ort:
+                orte.append(ort)
+                letzter_ort = ort
+
+        except Exception as e:
+            # Fängt unerwartete Fehler innerhalb der Schleife ab, damit das Skript nicht abstürzt
+            logging.error(f"Unerwarteter Fehler bei der Verarbeitung von Index {idx}: {e}", exc_info=True) # exc_info=True (bei Fehler wird Zeilennummer des Fehlers in Log geschrieben)
+            continue
+
+    logging.info(f"Reverse Geocoding erfolgreich beendet")
+    return orte
+        
+  
 
 if __name__ == "__main__":
     g = 9.81
@@ -373,3 +441,9 @@ if __name__ == "__main__":
     
     # höhenprofil ploten
     hoehenprofil_steigung(df)
+  
+
+
+    #Reverse Geocoding ( Ermitten der orte entlang der Strecke)
+    orte = reverse_goecoding(df)
+    print(orte)
