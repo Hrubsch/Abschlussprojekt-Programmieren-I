@@ -74,9 +74,9 @@ def haversine(lat1, lon1, lat2, lon2):
 
 def glaette_gps(df):
     df = df.copy()
-    df["lat_glatt"] = df["lat"].rolling(window=10).mean()
-    df["lon_glatt"] = df["lon"].rolling(window=10).mean()
-    df["ele_glatt"] = df["ele"].rolling(window=10).mean()
+    df["lat_glatt"] = df["lat"].rolling(window=10, min_periods=1).mean()
+    df["lon_glatt"] = df["lon"].rolling(window=10, min_periods=1).mean()
+    df["ele_glatt"] = df["ele"].rolling(window=10, min_periods=1).mean()
     return df
 
 def luftdruck_berechnung(rho_0, M, g, R, temp, h):
@@ -119,10 +119,16 @@ if __name__ == "__main__":
         df["lon_glatt"]
     )
 
-  
+    df["ds_orig"] = haversine(
+        df["lat"].shift(),
+        df["lon"].shift(),
+        df["lat"],
+        df["lon"]
+    )
+    df["s_orig"] = df["ds_orig"].cumsum()     # zurückgelegte Strecke 
 
     df["dt"] = df["time_s"].diff()  # Zeitdifferenz
-    df = df[df["dt"] >= 1].copy()   # Zeilen mit dt < 1 Sekunde entfernen
+    #df = df[df["dt"] >= 1].copy()   # Zeilen mit dt < 1 Sekunde entfernen
 
     df["s"] = df["ds"].cumsum()     # zurückgelegte Strecke
 
@@ -338,13 +344,13 @@ if __name__ == "__main__":
 
     # höhenprofil ploten
     # Daten vorbereiten (X: Distanz in km, Y: geglättete Höhe in m)
-    x = df["s"] / 1000  # Umrechnung von Meter in Kilometer
+    x = df["s_orig"] / 1000  # Umrechnung von Meter in Kilometer
     y = df["ele_glatt"]
 
-    # Steigung in Prozent berechnen: (dh / ds) * 100
+    # Steigung in Prozent berechnen:
     steigung = np.tan(df["phi_rad"]) * 100
 
-    # egmente für die LineCollection erstellen
+    # segmente für die LineCollection erstellen
     points = np.array([x, y]).T.reshape(-1, 1, 2)
     segments = np.concatenate([points[:-1], points[1:]], axis=1)
 
@@ -367,17 +373,16 @@ if __name__ == "__main__":
     ax.set_xticks(np.arange(0, 96, 5))
     ax.set_yticks(np.arange(500, 801, 100))
 
-    ax.set_xlabel("Distanz / km", fontsize=12)
-    ax.set_ylabel("Höhe / m", fontsize=12)
+    ax.set_xlabel("Distanz / km")
+    ax.set_ylabel("Höhe / m")
 
     # Ticks größer und sauberer darstellen
-    ax.tick_params(axis='both', which='major', labelsize=11)
+    ax.tick_params(axis='both', which='major')
 
     # Colorbar (Farbskala) hinzufügen
-    cbar = fig.colorbar(line, ax=ax, shrink=0.75, pad=0.02)
-    cbar.set_label("Steigung / %", fontsize=12)
+    cbar = fig.colorbar(line, ax=ax)
+    cbar.set_label("Steigung / %")
     cbar.set_ticks([-10, 0, 10])
-    cbar.ax.tick_params(labelsize=11)
+ 
     
     plt.savefig("hoehenprofil_steigung.png")
-    plt.show()
