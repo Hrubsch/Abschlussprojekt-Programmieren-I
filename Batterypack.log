@@ -2412,3 +2412,15 @@ UnboundLocalError: cannot access local variable 'ort_name' where it is not assoc
 2026-07-07 21:36:59,826:INFO: Starte Reverse Geocoding mit 2284 Zeilen. Schrittweite: 76
 2026-07-07 21:37:01,868:WARNING: Zeile 0 wurde übersprungen, weil kein gültiger Wert (NaN) eingetragen ist.
 2026-07-07 21:37:33,101:INFO: Reverse Geocoding erfolgreich beendet
+2026-07-07 21:44:46,936:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 21:44:46,937:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-07 21:44:46,937:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 21:44:46,937:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-07 21:44:46,937:INFO: Starte Simulation des Ladezustands
+2026-07-07 21:44:46,940:INFO: Batterie ist vollständig geladen.
+2026-07-07 21:44:46,986:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-07 21:44:50,544:INFO: Karte wurde als 'strecke_karte_vergleich.html' gespeichert.
+2026-07-07 21:44:50,736:INFO: Höhenprofil erfolgreich generiert und gespeichert.
+2026-07-07 21:44:50,737:INFO: Starte Reverse Geocoding mit 2284 Zeilen. Schrittweite: 76
+2026-07-07 21:44:52,776:WARNING: Zeile 0 wurde übersprungen, weil kein gültiger Wert (NaN) eingetragen ist.
+2026-07-07 21:45:23,745:INFO: Reverse Geocoding erfolgreich beendet

@@ -275,9 +275,9 @@ def reverse_goecoding(df : pd.DataFrame) -> list[str]:
             ort = None
             ort_name = None
             try: # um API Fehler abzufangen
-                location = geolocator.reverse((row["lat"], row["lon"]), timeout=10)
+                location = geolocator.reverse((row["lat"], row["lon"]), timeout=10) # suchen der adresse und speichern als location objekt 
                 if location: # true wenn location erkannt wird
-                    address = location.raw.get("address", {})
+                    address = location.raw.get("address", {}) # gibt adresse aus location objekt zurück
                     # Versuche den Stadtnamen oder das Dorf zu erkennen, erkennd kleinste urbane Einheit 
                     ort_name = address.get("village") or address.get("town") or address.get("city") or address.get("suburb")
                     # Falls kein spezifischer Ort gefunden wurde, nimm die formatierte Adresse
@@ -287,6 +287,7 @@ def reverse_goecoding(df : pd.DataFrame) -> list[str]:
                         ort = location.address
                 else:
                     ort = "Unbekannter Ort"
+                    logging.info("Ort wurde nicht gefunden")
             except Exception as e:
                 logging.warning(f"API-Fehler bei Zeile {idx}: {e}")
                 ort = f"Fehler bei der Abfrage ({e})"
