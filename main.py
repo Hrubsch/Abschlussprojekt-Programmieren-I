@@ -91,7 +91,7 @@ def reverse_geocode(lat, lon):
     try:
         # Ein eindeutiger user_agent ist für den Nominatim-Dienst zwingend erforderlich
         geolocator = Nominatim(user_agent="abschlussprojekt_ebike_tour_simulator")
-        location = geolocator.reverse((lat, lon), timeout=10)
+        location = geolocator.reverse((lat, lon), timeout=10) #timeout gibt max. Zeit an, die auf eine Antwort der API gewartet wird bevor die Verbindung abgebrochen wird
         if location: # true wenn location erkannt wird
             address = location.raw.get("address", {})
             # Versuche den Stadtnamen oder das Dorf zu erkennen, erkennd kleinste urbane Einheit 
@@ -115,7 +115,7 @@ if __name__ == "__main__":
     g = 9.81                    # Erdbeschleunigung (≈ 9,81 m/s²)
     R = 8.314                   # Universelle Gaskonstante (\(8{,}314 \text{ J/(mol}\cdot\text{K)}\))
     T = 273.15                  # Absolute Temperatur in Kelvin (T in °C + 273,15)
-
+    c_R = 0.008                 # Rollwiderstandsbeiwert Quelle: https://de.wikipedia.org/wiki/Rollwiderstand
 
 
 
@@ -172,10 +172,11 @@ if __name__ == "__main__":
 
     df["F_D"] = 0.5 * df["rho"] * A * df["v"]**2                                                          # Luftwiderstand
     df["F_H"] = (m * g) * np.sin(df["phi_rad"])                                                     # Hangkraft
-    
     df["F_A"] = m * df["a"]                                                                         # Beschleunigungskraft
-    
-    df["F_Antrieb"] = df["F_D"] + df["F_H"] + df["F_A"]                                             # Gesamte Antriebskraft
+
+    df["F_R"] = c_R * m * g * np.cos(df["phi_rad"])                                                 # Rollwiderstand https://de.wikipedia.org/wiki/Rollwiderstand
+
+    df["F_Antrieb"] = df["F_D"] + df["F_H"] + df["F_A"]  + df["F_R"]                                           # Gesamte Antriebskraft
     df["F_Antrieb"] = df["F_Antrieb"].rolling(window=25, center=True, min_periods=1).mean()         # Glättung der Antriebskraft
     
     df["P"] = df["F_Antrieb"] * df ["v"]                                                            # Berechnung der Leistung
@@ -220,7 +221,7 @@ if __name__ == "__main__":
 
 
     for spalte in df.columns:
-        if spalte in ["lat", "lon", "time", "ele", "ele_glatt", "ds", "dt", "dh","F_D", "F_H", "F_A", "F_Antrieb", "temp", "phi_rad", "lat_glatt", "lon_glatt", "time_s"]:
+        if spalte in ["lat", "lon", "time", "ele", "ele_glatt", "ds", "dt", "dh","F_D", "F_H", "F_A", "F_R", "F_Antrieb", "temp", "phi_rad", "lat_glatt", "lon_glatt", "time_s"]:
             continue
 
         plt.figure(figsize=(10, 5))
