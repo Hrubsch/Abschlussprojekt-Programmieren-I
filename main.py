@@ -122,8 +122,8 @@ def reverse_goecoding(df : pd.DataFrame) -> list[str]:
     orte = [] 
     letzter_ort = None
     
-    # Prüfen den Datensatz in Schritten von 20 Zeilen
-    schrittweite = max(1, len(df) // 30) 
+    # Berechnung der Schrittweite. Wenn // <30 dann schrittweite größer => ungenauer. Wenn // >30 dann schrittweite kleiner => genauer
+    schrittweite = max(1, len(df) // 30) # Schrittweite ca. 76
     
     print("Ermittle Orte entlang der Strecke...")
     logging.info(f"Starte Reverse Geocoding mit {len(df)} Zeilen. Schrittweite: {schrittweite}")
@@ -135,14 +135,12 @@ def reverse_goecoding(df : pd.DataFrame) -> list[str]:
             # Überspringe Zeilen mit NaN-Werten
             if pd.isna(row["s_orig"]) or pd.isna(row["lat"]) or pd.isna(row["lon"]):
                 continue
-
-            aktuelle_distanz_km = row["s_orig"] / 1000
             
             # API abfragen
             ort = reverse_geocode(row["lat"], row["lon"])
             
             # Warte 1 Sekunde, um den Fehler 429 (zu viele Anfragen) zu vermeiden
-            time.sleep(1)
+            time.sleep(1) # durch Warten dauert Funktion ca. 31 sek.
 
             # Speichern, wenn ein Ort gefunden wurde und er neu ist
             if ort and ort != letzter_ort:
@@ -151,7 +149,7 @@ def reverse_goecoding(df : pd.DataFrame) -> list[str]:
 
         except Exception as e:
             # Fängt unerwartete Fehler innerhalb der Schleife ab, damit das Skript nicht abstürzt
-            logging.error(f"Unerwarteter Fehler bei der Verarbeitung von Index {idx}: {e}", exc_info=True)
+            logging.error(f"Unerwarteter Fehler bei der Verarbeitung von Index {idx}: {e}", exc_info=True) # exc_info=True (bei Fehler wird Zeilennummer des Fehlers in Log geschrieben)
             continue
 
     logging.info(f"Reverse Geocoding erfolgreich beendet")
