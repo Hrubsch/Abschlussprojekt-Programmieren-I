@@ -59,6 +59,16 @@ def haversine(lat1, lon1, lat2, lon2):
 
 def glaette_gps(df):
     df = df.copy()
+    df["lat_glatt"] = df["lat"].rolling(window=10).mean()
+    df["lon_glatt"] = df["lon"].rolling(window=10).mean()
+    df["ele_glatt"] = df["ele"].rolling(window=10).mean()
+    return df
+
+def luftdruck_berechnung(rho_0, M, g, R, temp, h):
+
+    T = temp + 273.15  # Umrechnung von °C in Kelvin
+    rho = rho_0 * np.exp((-M * g * h) / (R * T))
+    return rho
     df["lat_glatt"] = df["lat"].rolling(window=10, min_periods=1).mean()
     df["lon_glatt"] = df["lon"].rolling(window=10, min_periods=1).mean()
     df["ele_glatt"] = df["ele"].rolling(window=10, min_periods=1).mean()
@@ -312,12 +322,12 @@ def reverse_goecoding(df : pd.DataFrame) -> list[str]:
         
   
 
-if __name__ == "__main__":
+def simulation(df, masse, A, r_inch):
     g = 9.81
     #rho = 1.225                # Luftdichte
-    A = 0.5625                  # Produkt Stirnfläche, cw-Wert
-    m = 80                      # Masse Fahrrad + Fahrer
-    r_inch = 27                 # Raddurchmesser in inch
+    m = masse                     # Masse Fahrrad + Fahrer
+    A = A                         # Produkt Stirnfläche, cw-Wert
+    r_inch = r_inch               # Raddurchmesser in inch
     r_m = r_inch * 0.0254       # Raddurchmesser in mm
     m_konst = 1.5               # Motorkonstante Nm/A
     rho_0 = 1.225               # Luftdichte auf Meereshöhe (ca. 1,225 kg/m³)
@@ -325,15 +335,9 @@ if __name__ == "__main__":
     g = 9.81                    # Erdbeschleunigung (≈ 9,81 m/s²)
     R = 8.314                   # Universelle Gaskonstante (\(8{,}314 \text{ J/(mol}\cdot\text{K)}\))
     T = 273.15                  # Absolute Temperatur in Kelvin (T in °C + 273,15)
-    c_R = 0.008                 # Rollwiderstandsbeiwert Quelle: https://de.wikipedia.org/wiki/Rollwiderstand
 
-
-
-    df = pd.read_csv("final_project_input_data.csv", sep=";") # Einlesen der CSV-Datei
     df = glaette_gps(df)
-
-
-
+    
     df["time"] = pd.to_datetime(df["time"])
     df["time_s"] = (df["time"] - df["time"].iloc[0]).dt.total_seconds()
 
@@ -345,6 +349,9 @@ if __name__ == "__main__":
         df["lon_glatt"]
     )
 
+
+    df["dt"] = df["time_s"].diff()  # Zeitdifferenz
+    df = df[df["dt"] >= 1].copy()   # Zeilen mit dt < 1 Sekunde entfernen
     df["ds_orig"] = haversine(
         df["lat"].shift(),
         df["lon"].shift(),
@@ -399,22 +406,30 @@ if __name__ == "__main__":
     df["I_motor"] = df["I_motor"].rolling(window=25, center=True, min_periods=1).mean()             # Glättung des Motorstroms   
 
 
-
-
     b1 = lifepo(capacity_nom_cell_Ah=20.0, initial_soc=1.0)
     b2 = nmc(capacity_nom_cell_Ah=20.0, initial_soc=1.0)
-    simulatorb1 = BatterySimulator(b1)
-    simulatorb2 = BatterySimulator(b2)
+    simulatorb1.simulation_ladezustand(df)
+    simulatorb1.plot_ladezustand(df)
+   
 
     soc_liste = simulatorb1.simulation_ladezustand(df)
     df["SOC"] = soc_liste
     simulatorb1.plot_ladezustand(df)
 
+# Ergebnisse speichern
+    return df
+
+
+
+def Output(df):
+
+
+
+    
+
 
     # Ergebnisse speichern
     df.to_csv("Output.csv", index=False)
-
-
 
     results = Kenngroessen(df)
     print(f"\nGesamtdistanz: {results['Gesamtstrecke']:.1f} m")
@@ -459,6 +474,43 @@ if __name__ == "__main__":
         plt.savefig(f"{spalte}.png", dpi=300, bbox_inches="tight")
         plt.close()
 
+    return results
+
+def parameterstudie(
+    df: pd.DataFrame,
+    parameter,
+    werte,
+    kennwert = "P_max"
+):
+    x = []
+    y = []
+    for wert in werte:
+        parameter_dict = {
+            "masse": 80,
+            "A": 0.5625,
+            "r_inch": 27
+        }
+        parameter_dict[parameter] = wert
+        df = simulation(df.copy(), **parameter_dict)
+        results = Kenngroessen(df)
+        x.append(wert)
+        y.append(results[kennwert])
+    plt.figure(figsize=(8,5))
+    plt.plot(
+        x,
+        y,
+        marker="o",
+        linewidth=2
+    )
+
+    plt.xlabel(parameter)
+    plt.ylabel(kennwert)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(
+        f"Parameterstudie_{parameter}_{kennwert}.png",
+        dpi=300
+    )
 create_latex_report(results, filename="Auswertung", title="Auswertung der Fahrraddaten")
 
     #Ploten der Strecke auf einer Karte
@@ -468,6 +520,15 @@ create_latex_report(results, filename="Auswertung", title="Auswertung der Fahrra
     hoehenprofil_steigung(df)
   
 
+if __name__ == "__main__":
+    df = pd.read_csv("final_project_input_data.csv", sep=";")
+    results = {}
+    df = simulation(df, masse=80, A=0.5625, r_inch=27)
+    Output(df)
+
+    parameterstudie(df, parameter="masse", werte=np.arange(60,121,5))
+    parameterstudie(df, parameter="A", werte=np.arange(0.5,5,0.5))
+    parameterstudie(df, parameter="r_inch", werte=np.arange(20,31,1))
 
     #Reverse Geocoding ( Ermitten der orte entlang der Strecke)
     orte = reverse_goecoding(df)
