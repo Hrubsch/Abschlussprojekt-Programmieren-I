@@ -113,7 +113,7 @@ def PlotStreckeAufKarte(df : pd.DataFrame) -> None:
         end_lon = df_map_orig["lon"].iloc[-1]
 
         # Karte initialisieren (OpenStreetMap als Standard)
-        karte = folium.Map(location=[start_lat, start_lon], zoom_start=14)
+        karte = folium.Map(tiles="cartodb positron")
 
         # Koordinaten-Paare für die Linie (PolyLine) vorbereiten
         koordinaten_glatt = list(zip(df_map_glatt["lat_glatt"], df_map_glatt["lon_glatt"]))
@@ -149,10 +149,24 @@ def PlotStreckeAufKarte(df : pd.DataFrame) -> None:
             icon=folium.Icon(color="red", icon="stop")
         ).add_to(karte)
 
+        # Karte automatisch so zoomen, dass die gesamte Strecke exakt hineinpasst
+        karte.fit_bounds(koordinaten_orig)
+
         # Karte als HTML-Datei speichern
         karte.save("strecke_karte_vergleich.html")
         print("Karte wurde als 'strecke_karte_vergleich.html' gespeichert.")
         logging.info("Karte wurde als 'strecke_karte_vergleich.html' gespeichert.")
+
+        # Automatisch als PNG exportieren via Selenium
+        print("Erstelle PNG-Abbildung (dies kann einen Moment dauern)...")
+        
+        # Konvertiert das Folium-Objekt direkt in ein PNG-Byte-Array und speichert es
+        img_data = karte._to_png(delay=3)  # delay gibt der Karte Zeit zum Rendern
+        with open("strecke_karte_abbildung.png", "wb") as f:
+            f.write(img_data)
+            
+        print(f"Abbildung wurde erfolgreich als 'strecke_karte_abbildung.png' gespeichert.")
+        logging.info(f"Abbildung wurde erfolgreich als 'strecke_karte_abbildung.png' gespeichert.")
 
     except KeyError as ke:
         logging.error(f"Strukturfehler im DataFrame bei der Kartenerstellung: {ke}")
