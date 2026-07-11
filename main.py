@@ -13,6 +13,9 @@ import time
 import logging
 from pathlib import Path
 import subprocess
+from typing import Any, Union
+from collections.abc import Sequence
+
 
 import matplotlib.pyplot as plt
 from datetime import datetime
@@ -79,9 +82,23 @@ def Kenngroessen(df: pd.DataFrame) -> dict:
         )
         raise
 
+def haversine(
+    lat1: float,
+    lon1: float,
+    lat2: float,
+    lon2: float
+) -> float:
+    """
+    Berechnet die Großkreisentfernung zwischen zwei geographischen
+    Koordinaten mithilfe der Haversine-Formel.
 
-def haversine(lat1, lon1, lat2, lon2):
+    Die berechnete Distanz entspricht der kürzesten Entfernung entlang der
+    Erdoberfläche.
 
+    Es wird ein mittlerer Erdradius von 6 371 000 m verwendet.
+    Alle Winkel werden intern von Grad in Bogenmaß umgerechnet.
+    """
+     
     logging.info("Starte Haversine-Berechnung.")
 
     try:
@@ -109,8 +126,11 @@ def haversine(lat1, lon1, lat2, lon2):
         )
         raise
 
-def glaette_gps(df: pd.DataFrame):
-    logging.info("Starte Glättung der GPS-Daten.")
+def glaette_gps(df: pd.DataFrame)-> pd.Dataframe:
+    """
+    glättet GPS Daten mit pandas .rolling Funktion
+    """
+    logging.info("Starte Glättung der GPS Daten.")
     try:
         if df.empty:
             raise ValueError("DataFrame ist leer.")
@@ -137,11 +157,17 @@ def glaette_gps(df: pd.DataFrame):
  
 
 def luftdruck_berechnung(rho_0, M, g, R, temp, h):
+    """
+    Berechnet Luftdruck abhängig von Termperatur und Höhe
+    """
     T = temp + 273.15  # Umrechnung von °C in Kelvin
     rho = rho_0 * np.exp((-M * g * h) / (R * T))
     return rho
 
 def PlotStreckeAufKarte(df : pd.DataFrame) -> None:
+    """
+    Plottet GPS Daten auf einer Karte, sodass ein durchgehender Weg entsteht.
+    """
     try:
         # Prüfen, ob die absolut notwendigen Spalten überhaupt im DataFrame existieren
         erforderliche_spalten = ["lat", "lon", "lat_glatt", "lon_glatt"]
@@ -378,7 +404,27 @@ def reverse_goecoding(df : pd.DataFrame) -> list[str]:
         
   
 
-def simulation(df, masse, A, r_inch):
+def simulation(
+    df: pd.DataFrame,
+    masse: float,
+    A: float,
+    r_inch: float
+) -> pd.DataFrame:
+    """
+    Simuliert die Fahrdynamik eines Fahrrads anhand von GPS-Daten und
+    Fahrzeugparametern.
+
+    Die Funktion verarbeitet GPS- und Höhendaten, berechnet kinematische
+    Größen (Strecke, Geschwindigkeit und Beschleunigung), den
+    Steigungswinkel, Luftdichte sowie die auf das Fahrrad wirkenden
+    Kräfte. Anschließend werden Antriebsleistung, Drehmoment,
+    Motorstrom und der Ladezustand verschiedener Batterietypen
+    simuliert.
+
+    Es werden auch mehrere gleitende Mittelwerte verwendet, um
+    Messrauschen in GPS-, Geschwindigkeits- und Beschleunigungsdaten zu
+    reduzieren.
+   """
 
     logging.info("Simulation gestartet.")
 
@@ -489,6 +535,20 @@ def simulation(df, masse, A, r_inch):
         df["I_motor"] = df["T_drehmoment"] / m_konst                                                    # Berechnung Motorstrom bei bekannter Motorkonstante
         df["I_motor"] = df["I_motor"].rolling(window=25, center=True, min_periods=1).mean()             # Glättung des Motorstroms   
         logging.info("Motorstrom berechnet.")
+
+        b1 = lifepo(capacity_nom_cell_Ah=20.0, initial_soc=1.0)
+        b2 = nmc(capacity_nom_cell_Ah=20.0, initial_soc=1.0)
+        simulatorb1 = BatterySimulator(b1)
+        simulatorb2 = BatterySimulator(b2)
+        simulatorb1.simulation_ladezustand(df)
+        simulatorb2.simulation_ladezustand(df)    
+        soc_liste = simulatorb1.simulation_ladezustand(df)
+
+        df["SOC"] = soc_liste
+        simulatorb1.plot_ladezustand(df)
+        simulatorb2.plot_ladezustand(df)
+        logging.info("Batteriesimulation abgeschlossen.")
+
         logging.info("Simulation erfolgreich beendet.")
 
         return df
@@ -508,7 +568,19 @@ def simulation(df, masse, A, r_inch):
         )
         raise
 
-def Output(df):
+def Output(df: pd.DataFrame) -> dict[str, Any]:
+    """
+    Speichert die Simulationsergebnisse, gibt wichtige Kenngrößen aus
+    und erstellt Diagramme aller relevanten Messgrößen.
+
+    Die Funktion führt folgende Schritte aus:
+
+    - Speichert den vollständigen DataFrame als CSV-Datei.
+    - Berechnet die wichtigsten Fahr- und Simulationskenngrößen.
+    - Gibt die Kenngrößen auf der Konsole aus.
+    - Erstellt für jede relevante Größe ein Zeitdiagramm und speichert
+      dieses als PNG-Datei.
+    """
 
     # Ergebnisse speichern
     df.to_csv("Output.csv", index=False)
@@ -558,10 +630,21 @@ def Output(df):
 
 def parameterstudie(
     df: pd.DataFrame,
-    parameter,
-    werte,
-    kennwert="P_max"
-):
+    parameter: str,
+    werte: Sequence[Union[int, float]],
+    kennwert: str = "P_max"
+) -> None:
+    """
+    Führt eine Parameterstudie für einen ausgewählten Eingangsparameter
+    der Simulation durch und erstellt ein Diagramm des resultierenden
+    Kennwerts.
+
+    Für jeden Wert in "werte" wird die Simulation mit den
+    entsprechenden Fahrzeugparametern ausgeführt. Anschließend wird der
+    gewählte Kennwert berechnet und gegen den untersuchten Parameter
+    aufgetragen.
+    """
+
     logging.info(f"Starte Parameterstudie für '{parameter}'.")
 
     try:
@@ -616,7 +699,14 @@ def parameterstudie(
         raise
 
 
-def himmelsrichtung(df: pd.DataFrame):
+def himmelsrichtung(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Berechnet die Fahrtrichtung zwischen aufeinanderfolgenden
+    GPS-Koordinaten und ergänzt den DataFrame um den numerischen
+    Kurswinkel sowie die zugehörige Himmelsrichtung.
+    Zunächst wird der Kurswinkel (Bearing) relativ zum geografischen Norden bestimmt. Anschließend
+    wird dieser einer der acht Haupthimmelsrichtungen zugeordnet.
+    """
 
     logging.info("Berechne Himmelsrichtung.")
 
@@ -689,18 +779,9 @@ def himmelsrichtung(df: pd.DataFrame):
 if __name__ == "__main__":
     df = pd.read_csv("final_project_input_data.csv", sep=";")
     results = {}
+
     df = simulation(df, masse=80, A=0.5625, r_inch=27)
-    b1 = lifepo(capacity_nom_cell_Ah=20.0, initial_soc=1.0)
-    b2 = nmc(capacity_nom_cell_Ah=20.0, initial_soc=1.0)
-    simulatorb1 = BatterySimulator(b1)
-    simulatorb2 = BatterySimulator(b2)
-    simulatorb1.simulation_ladezustand(df)
-    simulatorb2.simulation_ladezustand(df)    
-    soc_liste = simulatorb1.simulation_ladezustand(df)
-    df["SOC"] = soc_liste
-    simulatorb1.plot_ladezustand(df)
-    simulatorb2.plot_ladezustand(df)
-    logging.info("Batteriesimulation abgeschlossen.")
+
 
     results = Kenngroessen(df)    
     #Ploten der Strecke auf einer Karte
