@@ -10,9 +10,26 @@ from pylatex import (
 from pylatex.utils import bold
 import os
 import subprocess
+from collections.abc import Mapping, Sequence
+from typing import Any
 
 
-def create_latex_report(results, Orte, filename="Auswertung", title="Auswertung der Fahrraddaten"):
+def create_latex_report(
+    results: Mapping[str, Any],
+    Orte: Sequence[str],
+    filename: str = "Auswertung",
+    title: str = "Auswertung der Fahrraddaten"
+) -> None:
+    """
+    Erstellt einen LaTeX-Bericht mit den berechneten Kenngrößen und
+    allen erzeugten Diagrammen.
+
+    Die Funktion erzeugt ein LaTeX-Dokument mit einer Titelseite,
+    einer Tabelle der wichtigsten Auswertungsergebnisse sowie einer
+    Abbildung für jede im aktuellen Arbeitsverzeichnis vorhandene
+    PNG-Datei.
+    """
+
     doc = Document(documentclass="article")
 
     # Pakete
@@ -46,10 +63,12 @@ def create_latex_report(results, Orte, filename="Auswertung", title="Auswertung 
                            f"{results['Anstieg']:.1f} m"))
             table.add_row(("Gesamter Abstieg",
                            f"{results['Abstieg']:.1f} m"))
-            table.add_row("Besuchte Orte in Reihenfolge:",
-                          str(Orte))
 
             table.add_hline()
+    
+    orte_text = ", ".join(Orte)
+    with doc.create(Section("Durchfahrene Orte")):
+        doc.append(orte_text)
 
     with doc.create(Section("Diagramme")):
         png_files = sorted(

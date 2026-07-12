@@ -545,8 +545,8 @@ def simulation(
         soc_liste = simulatorb1.simulation_ladezustand(df)
 
         df["SOC"] = soc_liste
-        simulatorb1.plot_ladezustand(df)
-        simulatorb2.plot_ladezustand(df)
+        simulatorb1.plot_ladezustand("SOC", df)
+        simulatorb2.plot_ladezustand("SOC", df)
         logging.info("Batteriesimulation abgeschlossen.")
 
         logging.info("Simulation erfolgreich beendet.")
