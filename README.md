@@ -31,7 +31,7 @@ Folgen Sie diesen Schritten, um das Projekt auf deinem lokalen System einzuricht
 ### Voraussetzungen
 * **Python:** Sicherstellen, dass Python (Version $\ge$ 3.10) auf dem System installiert ist.
 * ```bash
-  python --version
+  py --version
 
 ### 1. Repository klonen
 * Terminal öffnen und Projekt von GitHub herunterladen/clonen:
