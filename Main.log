@@ -4388,3 +4388,1257 @@
 2026-07-15 17:07:17,019:INFO: Starte Berechnung der Kenngrößen.
 2026-07-15 17:07:17,020:INFO: Kenngrößen erfolgreich berechnet.
 2026-07-15 17:07:17,138:INFO: Parameterstudie erfolgreich abgeschlossen.
+2026-07-15 17:44:09,304:INFO: Simulation gestartet.
+2026-07-15 17:44:09,305:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:09,305:INFO: Konstanten initialisiert.
+2026-07-15 17:44:09,305:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:09,306:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:09,306:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:09,306:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:09,308:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:09,308:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:09,312:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:09,312:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:09,312:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:09,313:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:09,314:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:09,314:INFO: Strecke berechnet.
+2026-07-15 17:44:09,315:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:09,316:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:09,316:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:09,317:INFO: Luftdichte berechnet.
+2026-07-15 17:44:09,318:INFO: Kräfte berechnet.
+2026-07-15 17:44:09,318:INFO: Leistung berechnet.
+2026-07-15 17:44:09,318:INFO: Drehmoment berechnet.
+2026-07-15 17:44:09,319:INFO: Motorstrom berechnet.
+2026-07-15 17:44:09,319:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:09,319:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:09,319:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:09,319:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:09,319:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:09,390:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:09,390:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:09,430:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:09,625:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:09,747:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:09,747:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:09,747:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:09,748:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:09,771:INFO: Karte wurde als 'strecke_karte_vergleich.html' gespeichert.
+2026-07-15 17:44:22,192:INFO: Höhenprofil erfolgreich generiert und gespeichert.
+2026-07-15 17:44:22,192:INFO: Starte Reverse Geocoding mit 2284 Zeilen. Schrittweite: 76
+2026-07-15 17:44:24,204:WARNING: Zeile 0 wurde übersprungen, weil kein gültiger Wert (NaN) eingetragen ist.
+2026-07-15 17:44:54,983:INFO: Orte erfolgreich in durchfahrene_orte.txt exportiert.
+2026-07-15 17:44:54,984:INFO: Reverse Geocoding erfolgreich beendet
+2026-07-15 17:44:55,028:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:55,030:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:57,482:INFO: Starte Parameterstudie für 'masse'.
+2026-07-15 17:44:57,483:INFO: Simulation gestartet.
+2026-07-15 17:44:57,483:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:57,483:INFO: Konstanten initialisiert.
+2026-07-15 17:44:57,483:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:57,483:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:57,483:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:57,484:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:57,485:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:57,485:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:57,487:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:57,487:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:57,488:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:57,488:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:57,489:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:57,489:INFO: Strecke berechnet.
+2026-07-15 17:44:57,490:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:57,490:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:57,491:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:57,491:INFO: Luftdichte berechnet.
+2026-07-15 17:44:57,492:INFO: Kräfte berechnet.
+2026-07-15 17:44:57,492:INFO: Leistung berechnet.
+2026-07-15 17:44:57,493:INFO: Drehmoment berechnet.
+2026-07-15 17:44:57,493:INFO: Motorstrom berechnet.
+2026-07-15 17:44:57,493:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:57,493:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:57,493:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:57,493:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:57,493:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:57,527:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:57,527:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:57,556:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:57,640:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:57,720:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:57,721:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:57,721:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:57,721:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:57,722:INFO: Simulation gestartet.
+2026-07-15 17:44:57,722:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:57,722:INFO: Konstanten initialisiert.
+2026-07-15 17:44:57,722:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:57,723:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:57,723:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:57,723:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:57,724:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:57,725:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:57,726:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:57,726:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:57,726:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:57,727:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:57,727:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:57,728:INFO: Strecke berechnet.
+2026-07-15 17:44:57,728:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:57,729:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:57,730:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:57,730:INFO: Luftdichte berechnet.
+2026-07-15 17:44:57,731:INFO: Kräfte berechnet.
+2026-07-15 17:44:57,731:INFO: Leistung berechnet.
+2026-07-15 17:44:57,731:INFO: Drehmoment berechnet.
+2026-07-15 17:44:57,731:INFO: Motorstrom berechnet.
+2026-07-15 17:44:57,731:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:57,731:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:57,731:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:57,731:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:57,731:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:57,757:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:57,758:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:57,784:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:57,904:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:57,984:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:57,984:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:57,984:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:57,985:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:57,986:INFO: Simulation gestartet.
+2026-07-15 17:44:57,986:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:57,986:INFO: Konstanten initialisiert.
+2026-07-15 17:44:57,986:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:57,986:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:57,986:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:57,987:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:57,988:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:57,988:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:57,989:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:57,990:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:57,990:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:57,991:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:57,991:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:57,991:INFO: Strecke berechnet.
+2026-07-15 17:44:57,992:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:57,993:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:57,994:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:57,994:INFO: Luftdichte berechnet.
+2026-07-15 17:44:57,996:INFO: Kräfte berechnet.
+2026-07-15 17:44:57,996:INFO: Leistung berechnet.
+2026-07-15 17:44:57,996:INFO: Drehmoment berechnet.
+2026-07-15 17:44:57,997:INFO: Motorstrom berechnet.
+2026-07-15 17:44:57,997:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:57,997:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:57,997:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:57,997:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:57,997:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:58,025:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:58,025:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:58,053:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:58,138:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:58,221:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:58,222:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:58,222:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:58,223:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:58,223:INFO: Simulation gestartet.
+2026-07-15 17:44:58,223:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:58,223:INFO: Konstanten initialisiert.
+2026-07-15 17:44:58,223:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:58,224:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:58,224:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:58,224:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:58,225:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:58,225:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:58,227:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:58,227:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:58,228:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:58,229:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:58,230:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:58,230:INFO: Strecke berechnet.
+2026-07-15 17:44:58,231:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:58,232:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:58,232:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:58,233:INFO: Luftdichte berechnet.
+2026-07-15 17:44:58,233:INFO: Kräfte berechnet.
+2026-07-15 17:44:58,234:INFO: Leistung berechnet.
+2026-07-15 17:44:58,234:INFO: Drehmoment berechnet.
+2026-07-15 17:44:58,234:INFO: Motorstrom berechnet.
+2026-07-15 17:44:58,234:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:58,234:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:58,234:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:58,234:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:58,234:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:58,262:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:58,263:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:58,291:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:58,379:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:58,465:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:58,466:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:58,466:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:58,467:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:58,467:INFO: Simulation gestartet.
+2026-07-15 17:44:58,467:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:58,467:INFO: Konstanten initialisiert.
+2026-07-15 17:44:58,467:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:58,468:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:58,468:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:58,468:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:58,471:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:58,471:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:58,474:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:58,474:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:58,475:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:58,476:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:58,477:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:58,478:INFO: Strecke berechnet.
+2026-07-15 17:44:58,479:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:58,480:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:58,481:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:58,481:INFO: Luftdichte berechnet.
+2026-07-15 17:44:58,482:INFO: Kräfte berechnet.
+2026-07-15 17:44:58,482:INFO: Leistung berechnet.
+2026-07-15 17:44:58,483:INFO: Drehmoment berechnet.
+2026-07-15 17:44:58,483:INFO: Motorstrom berechnet.
+2026-07-15 17:44:58,483:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:58,483:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:58,483:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:58,483:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:58,483:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:58,512:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:58,512:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:58,543:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:58,630:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:58,716:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:58,716:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:58,717:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:58,718:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:58,718:INFO: Simulation gestartet.
+2026-07-15 17:44:58,718:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:58,718:INFO: Konstanten initialisiert.
+2026-07-15 17:44:58,718:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:58,720:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:58,720:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:58,720:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:58,722:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:58,722:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:58,723:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:58,723:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:58,724:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:58,724:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:58,725:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:58,725:INFO: Strecke berechnet.
+2026-07-15 17:44:58,726:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:58,727:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:58,728:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:58,728:INFO: Luftdichte berechnet.
+2026-07-15 17:44:58,729:INFO: Kräfte berechnet.
+2026-07-15 17:44:58,729:INFO: Leistung berechnet.
+2026-07-15 17:44:58,729:INFO: Drehmoment berechnet.
+2026-07-15 17:44:58,729:INFO: Motorstrom berechnet.
+2026-07-15 17:44:58,729:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:58,729:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:58,729:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:58,729:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:58,729:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:58,771:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:58,771:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:58,800:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:58,887:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:58,969:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:58,969:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:58,969:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:58,970:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:58,970:INFO: Simulation gestartet.
+2026-07-15 17:44:58,970:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:58,970:INFO: Konstanten initialisiert.
+2026-07-15 17:44:58,970:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:58,971:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:58,971:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:58,971:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:58,972:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:58,972:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:58,974:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:58,974:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:58,974:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:58,975:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:58,976:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:58,976:INFO: Strecke berechnet.
+2026-07-15 17:44:58,977:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:58,978:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:58,979:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:58,979:INFO: Luftdichte berechnet.
+2026-07-15 17:44:58,980:INFO: Kräfte berechnet.
+2026-07-15 17:44:58,980:INFO: Leistung berechnet.
+2026-07-15 17:44:58,980:INFO: Drehmoment berechnet.
+2026-07-15 17:44:58,980:INFO: Motorstrom berechnet.
+2026-07-15 17:44:58,980:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:58,980:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:58,980:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:58,980:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:58,981:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,007:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,007:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,036:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,122:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:59,201:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:59,201:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:59,202:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:59,202:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:59,203:INFO: Simulation gestartet.
+2026-07-15 17:44:59,203:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:59,203:INFO: Konstanten initialisiert.
+2026-07-15 17:44:59,203:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:59,203:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:59,203:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:59,204:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:59,205:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:59,205:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:59,206:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:59,206:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:59,207:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:59,207:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:59,208:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:59,208:INFO: Strecke berechnet.
+2026-07-15 17:44:59,209:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:59,210:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:59,211:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:59,211:INFO: Luftdichte berechnet.
+2026-07-15 17:44:59,212:INFO: Kräfte berechnet.
+2026-07-15 17:44:59,212:INFO: Leistung berechnet.
+2026-07-15 17:44:59,213:INFO: Drehmoment berechnet.
+2026-07-15 17:44:59,213:INFO: Motorstrom berechnet.
+2026-07-15 17:44:59,213:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:59,213:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:59,213:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:59,213:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:59,213:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,240:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,240:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,266:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,352:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:59,432:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:59,432:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:59,432:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:59,433:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:59,433:INFO: Simulation gestartet.
+2026-07-15 17:44:59,433:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:59,433:INFO: Konstanten initialisiert.
+2026-07-15 17:44:59,433:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:59,434:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:59,434:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:59,434:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:59,436:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:59,436:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:59,438:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:59,438:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:59,438:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:59,439:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:59,439:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:59,440:INFO: Strecke berechnet.
+2026-07-15 17:44:59,440:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:59,441:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:59,442:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:59,442:INFO: Luftdichte berechnet.
+2026-07-15 17:44:59,443:INFO: Kräfte berechnet.
+2026-07-15 17:44:59,443:INFO: Leistung berechnet.
+2026-07-15 17:44:59,443:INFO: Drehmoment berechnet.
+2026-07-15 17:44:59,443:INFO: Motorstrom berechnet.
+2026-07-15 17:44:59,443:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:59,443:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:59,443:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:59,443:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:59,443:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,471:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,471:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,497:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,584:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:59,677:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:59,677:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:59,677:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:59,678:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:59,678:INFO: Simulation gestartet.
+2026-07-15 17:44:59,678:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:59,678:INFO: Konstanten initialisiert.
+2026-07-15 17:44:59,678:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:59,679:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:59,679:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:59,679:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:59,680:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:59,680:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:59,681:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:59,681:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:59,682:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:59,682:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:59,683:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:59,683:INFO: Strecke berechnet.
+2026-07-15 17:44:59,684:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:59,684:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:59,685:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:59,686:INFO: Luftdichte berechnet.
+2026-07-15 17:44:59,687:INFO: Kräfte berechnet.
+2026-07-15 17:44:59,687:INFO: Leistung berechnet.
+2026-07-15 17:44:59,687:INFO: Drehmoment berechnet.
+2026-07-15 17:44:59,688:INFO: Motorstrom berechnet.
+2026-07-15 17:44:59,688:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:59,688:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:59,688:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:59,688:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:59,688:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,716:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,716:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,742:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,826:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:44:59,907:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:44:59,907:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:44:59,907:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:44:59,908:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:44:59,908:INFO: Simulation gestartet.
+2026-07-15 17:44:59,908:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:44:59,908:INFO: Konstanten initialisiert.
+2026-07-15 17:44:59,908:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:44:59,909:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:44:59,909:INFO: GPS-Daten geglättet.
+2026-07-15 17:44:59,909:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:44:59,911:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:44:59,911:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:44:59,912:INFO: Zeitdaten berechnet.
+2026-07-15 17:44:59,912:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:59,914:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:59,915:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:44:59,915:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:44:59,916:INFO: Strecke berechnet.
+2026-07-15 17:44:59,916:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:44:59,917:INFO: Beschleunigung berechnet.
+2026-07-15 17:44:59,918:INFO: Steigungswinkel berechnet.
+2026-07-15 17:44:59,918:INFO: Luftdichte berechnet.
+2026-07-15 17:44:59,919:INFO: Kräfte berechnet.
+2026-07-15 17:44:59,919:INFO: Leistung berechnet.
+2026-07-15 17:44:59,919:INFO: Drehmoment berechnet.
+2026-07-15 17:44:59,919:INFO: Motorstrom berechnet.
+2026-07-15 17:44:59,919:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:59,919:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:44:59,919:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:59,920:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:44:59,920:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,945:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:44:59,945:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:44:59,973:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:00,060:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:00,140:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:00,140:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:00,140:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:00,141:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:00,141:INFO: Simulation gestartet.
+2026-07-15 17:45:00,141:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:00,141:INFO: Konstanten initialisiert.
+2026-07-15 17:45:00,141:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:00,142:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:00,142:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:00,142:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:00,144:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:00,144:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:00,145:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:00,145:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:00,146:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:00,147:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:00,147:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:00,147:INFO: Strecke berechnet.
+2026-07-15 17:45:00,148:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:00,149:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:00,150:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:00,150:INFO: Luftdichte berechnet.
+2026-07-15 17:45:00,151:INFO: Kräfte berechnet.
+2026-07-15 17:45:00,151:INFO: Leistung berechnet.
+2026-07-15 17:45:00,151:INFO: Drehmoment berechnet.
+2026-07-15 17:45:00,151:INFO: Motorstrom berechnet.
+2026-07-15 17:45:00,152:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:00,152:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:00,152:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:00,152:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:00,152:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:00,178:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:00,178:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:00,206:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:00,284:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:00,362:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:00,362:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:00,362:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:00,363:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:00,364:INFO: Simulation gestartet.
+2026-07-15 17:45:00,364:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:00,364:INFO: Konstanten initialisiert.
+2026-07-15 17:45:00,364:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:00,364:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:00,364:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:00,364:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:00,366:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:00,366:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:00,367:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:00,367:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:00,368:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:00,368:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:00,369:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:00,369:INFO: Strecke berechnet.
+2026-07-15 17:45:00,370:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:00,371:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:00,371:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:00,372:INFO: Luftdichte berechnet.
+2026-07-15 17:45:00,372:INFO: Kräfte berechnet.
+2026-07-15 17:45:00,373:INFO: Leistung berechnet.
+2026-07-15 17:45:00,373:INFO: Drehmoment berechnet.
+2026-07-15 17:45:00,373:INFO: Motorstrom berechnet.
+2026-07-15 17:45:00,373:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:00,373:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:00,373:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:00,373:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:00,373:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:00,400:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:00,400:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:00,427:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:00,506:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:00,585:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:00,585:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:00,585:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:00,586:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:00,720:INFO: Parameterstudie erfolgreich abgeschlossen.
+2026-07-15 17:45:00,720:INFO: Starte Parameterstudie für 'A'.
+2026-07-15 17:45:00,720:INFO: Simulation gestartet.
+2026-07-15 17:45:00,720:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:00,720:INFO: Konstanten initialisiert.
+2026-07-15 17:45:00,720:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:00,721:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:00,721:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:00,721:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:00,723:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:00,723:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:00,724:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:00,724:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:00,725:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:00,726:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:00,726:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:00,726:INFO: Strecke berechnet.
+2026-07-15 17:45:00,727:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:00,728:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:00,729:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:00,729:INFO: Luftdichte berechnet.
+2026-07-15 17:45:00,730:INFO: Kräfte berechnet.
+2026-07-15 17:45:00,730:INFO: Leistung berechnet.
+2026-07-15 17:45:00,730:INFO: Drehmoment berechnet.
+2026-07-15 17:45:00,730:INFO: Motorstrom berechnet.
+2026-07-15 17:45:00,730:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:00,730:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:00,730:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:00,730:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:00,731:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:00,757:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:00,757:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:00,784:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:00,865:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:00,942:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:00,942:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:00,942:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:00,943:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:00,943:INFO: Simulation gestartet.
+2026-07-15 17:45:00,943:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:00,943:INFO: Konstanten initialisiert.
+2026-07-15 17:45:00,943:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:00,944:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:00,944:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:00,944:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:00,946:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:00,946:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:00,947:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:00,947:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:00,948:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:00,948:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:00,949:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:00,949:INFO: Strecke berechnet.
+2026-07-15 17:45:00,950:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:00,950:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:00,951:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:00,951:INFO: Luftdichte berechnet.
+2026-07-15 17:45:00,952:INFO: Kräfte berechnet.
+2026-07-15 17:45:00,952:INFO: Leistung berechnet.
+2026-07-15 17:45:00,953:INFO: Drehmoment berechnet.
+2026-07-15 17:45:00,953:INFO: Motorstrom berechnet.
+2026-07-15 17:45:00,953:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:00,953:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:00,953:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:00,953:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:00,953:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:00,979:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:00,981:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:00,981:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,006:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,007:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:01,092:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:01,169:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:01,169:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:01,170:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:01,170:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:01,171:INFO: Simulation gestartet.
+2026-07-15 17:45:01,171:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:01,171:INFO: Konstanten initialisiert.
+2026-07-15 17:45:01,171:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:01,172:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:01,172:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:01,172:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:01,173:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:01,173:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:01,175:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:01,175:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:01,175:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:01,176:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:01,176:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:01,177:INFO: Strecke berechnet.
+2026-07-15 17:45:01,177:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:01,178:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:01,179:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:01,180:INFO: Luftdichte berechnet.
+2026-07-15 17:45:01,181:INFO: Kräfte berechnet.
+2026-07-15 17:45:01,181:INFO: Leistung berechnet.
+2026-07-15 17:45:01,181:INFO: Drehmoment berechnet.
+2026-07-15 17:45:01,181:INFO: Motorstrom berechnet.
+2026-07-15 17:45:01,181:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:01,181:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:01,181:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:01,181:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:01,181:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,200:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,208:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:01,208:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,228:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,236:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:01,317:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:01,395:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:01,395:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:01,395:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:01,396:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:01,396:INFO: Simulation gestartet.
+2026-07-15 17:45:01,396:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:01,396:INFO: Konstanten initialisiert.
+2026-07-15 17:45:01,396:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:01,397:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:01,397:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:01,397:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:01,399:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:01,399:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:01,400:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:01,400:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:01,401:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:01,401:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:01,402:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:01,402:INFO: Strecke berechnet.
+2026-07-15 17:45:01,403:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:01,404:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:01,405:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:01,405:INFO: Luftdichte berechnet.
+2026-07-15 17:45:01,406:INFO: Kräfte berechnet.
+2026-07-15 17:45:01,406:INFO: Leistung berechnet.
+2026-07-15 17:45:01,406:INFO: Drehmoment berechnet.
+2026-07-15 17:45:01,407:INFO: Motorstrom berechnet.
+2026-07-15 17:45:01,407:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:01,407:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:01,407:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:01,407:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:01,407:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,422:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,433:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:01,433:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,448:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,460:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:01,541:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:01,620:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:01,620:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:01,620:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:01,621:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:01,621:INFO: Simulation gestartet.
+2026-07-15 17:45:01,621:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:01,621:INFO: Konstanten initialisiert.
+2026-07-15 17:45:01,621:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:01,622:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:01,622:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:01,622:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:01,623:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:01,623:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:01,625:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:01,625:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:01,625:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:01,626:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:01,626:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:01,626:INFO: Strecke berechnet.
+2026-07-15 17:45:01,627:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:01,628:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:01,629:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:01,629:INFO: Luftdichte berechnet.
+2026-07-15 17:45:01,630:INFO: Kräfte berechnet.
+2026-07-15 17:45:01,630:INFO: Leistung berechnet.
+2026-07-15 17:45:01,630:INFO: Drehmoment berechnet.
+2026-07-15 17:45:01,631:INFO: Motorstrom berechnet.
+2026-07-15 17:45:01,631:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:01,631:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:01,631:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:01,631:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:01,631:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,672:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,686:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:01,686:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,707:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,723:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:01,802:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:01,880:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:01,880:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:01,880:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:01,881:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:01,882:INFO: Simulation gestartet.
+2026-07-15 17:45:01,882:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:01,882:INFO: Konstanten initialisiert.
+2026-07-15 17:45:01,882:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:01,882:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:01,882:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:01,882:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:01,884:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:01,884:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:01,886:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:01,886:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:01,886:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:01,887:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:01,887:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:01,888:INFO: Strecke berechnet.
+2026-07-15 17:45:01,888:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:01,889:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:01,890:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:01,890:INFO: Luftdichte berechnet.
+2026-07-15 17:45:01,891:INFO: Kräfte berechnet.
+2026-07-15 17:45:01,891:INFO: Leistung berechnet.
+2026-07-15 17:45:01,891:INFO: Drehmoment berechnet.
+2026-07-15 17:45:01,891:INFO: Motorstrom berechnet.
+2026-07-15 17:45:01,891:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:01,891:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:01,891:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:01,891:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:01,891:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,903:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,918:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:01,918:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:01,929:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:01,944:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:02,024:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:02,110:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:02,110:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:02,110:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:02,111:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:02,112:INFO: Simulation gestartet.
+2026-07-15 17:45:02,112:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:02,112:INFO: Konstanten initialisiert.
+2026-07-15 17:45:02,112:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:02,112:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:02,112:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:02,112:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:02,115:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:02,115:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:02,116:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:02,116:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:02,117:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:02,117:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:02,118:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:02,118:INFO: Strecke berechnet.
+2026-07-15 17:45:02,119:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:02,120:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:02,121:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:02,121:INFO: Luftdichte berechnet.
+2026-07-15 17:45:02,122:INFO: Kräfte berechnet.
+2026-07-15 17:45:02,123:INFO: Leistung berechnet.
+2026-07-15 17:45:02,123:INFO: Drehmoment berechnet.
+2026-07-15 17:45:02,123:INFO: Motorstrom berechnet.
+2026-07-15 17:45:02,123:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:02,123:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:02,123:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:02,123:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:02,123:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:02,133:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:02,151:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:02,151:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:02,162:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:02,178:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:02,264:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:02,350:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:02,350:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:02,350:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:02,351:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:02,351:INFO: Simulation gestartet.
+2026-07-15 17:45:02,351:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:02,351:INFO: Konstanten initialisiert.
+2026-07-15 17:45:02,351:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:02,352:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:02,352:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:02,352:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:02,354:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:02,354:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:02,367:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:02,367:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:02,368:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:02,369:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:02,370:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:02,370:INFO: Strecke berechnet.
+2026-07-15 17:45:02,371:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:02,372:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:02,374:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:02,374:INFO: Luftdichte berechnet.
+2026-07-15 17:45:02,375:INFO: Kräfte berechnet.
+2026-07-15 17:45:02,375:INFO: Leistung berechnet.
+2026-07-15 17:45:02,376:INFO: Drehmoment berechnet.
+2026-07-15 17:45:02,376:INFO: Motorstrom berechnet.
+2026-07-15 17:45:02,376:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:02,376:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:02,376:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:02,376:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:02,376:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:02,387:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:02,410:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:02,410:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:02,421:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:02,442:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:02,547:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:02,635:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:02,635:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:02,635:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:02,636:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:02,637:INFO: Simulation gestartet.
+2026-07-15 17:45:02,637:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:02,637:INFO: Konstanten initialisiert.
+2026-07-15 17:45:02,637:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:02,637:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:02,637:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:02,637:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:02,639:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:02,639:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:02,645:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:02,645:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:02,646:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:02,647:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:02,647:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:02,647:INFO: Strecke berechnet.
+2026-07-15 17:45:02,648:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:02,650:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:02,651:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:02,651:INFO: Luftdichte berechnet.
+2026-07-15 17:45:02,652:INFO: Kräfte berechnet.
+2026-07-15 17:45:02,653:INFO: Leistung berechnet.
+2026-07-15 17:45:02,653:INFO: Drehmoment berechnet.
+2026-07-15 17:45:02,653:INFO: Motorstrom berechnet.
+2026-07-15 17:45:02,653:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:02,653:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:02,653:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:02,653:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:02,653:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:02,663:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:02,686:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:02,686:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:02,696:WARNING: Batterie ist vollständig entladen!
+2026-07-15 17:45:02,722:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:02,818:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:02,914:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:02,914:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:02,914:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:02,915:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:03,095:INFO: Parameterstudie erfolgreich abgeschlossen.
+2026-07-15 17:45:03,095:INFO: Starte Parameterstudie für 'r_inch'.
+2026-07-15 17:45:03,096:INFO: Simulation gestartet.
+2026-07-15 17:45:03,096:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:03,096:INFO: Konstanten initialisiert.
+2026-07-15 17:45:03,096:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:03,097:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:03,097:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:03,097:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:03,098:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:03,098:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:03,100:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:03,100:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:03,101:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:03,101:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:03,103:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:03,103:INFO: Strecke berechnet.
+2026-07-15 17:45:03,104:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:03,105:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:03,106:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:03,107:INFO: Luftdichte berechnet.
+2026-07-15 17:45:03,108:INFO: Kräfte berechnet.
+2026-07-15 17:45:03,108:INFO: Leistung berechnet.
+2026-07-15 17:45:03,108:INFO: Drehmoment berechnet.
+2026-07-15 17:45:03,109:INFO: Motorstrom berechnet.
+2026-07-15 17:45:03,109:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:03,109:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:03,109:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:03,109:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:03,109:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:03,142:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:03,142:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:03,176:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:03,270:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:03,402:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:03,402:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:03,402:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:03,403:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:03,403:INFO: Simulation gestartet.
+2026-07-15 17:45:03,403:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:03,404:INFO: Konstanten initialisiert.
+2026-07-15 17:45:03,404:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:03,404:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:03,404:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:03,404:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:03,406:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:03,406:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:03,407:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:03,407:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:03,408:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:03,408:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:03,409:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:03,409:INFO: Strecke berechnet.
+2026-07-15 17:45:03,410:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:03,411:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:03,412:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:03,412:INFO: Luftdichte berechnet.
+2026-07-15 17:45:03,413:INFO: Kräfte berechnet.
+2026-07-15 17:45:03,413:INFO: Leistung berechnet.
+2026-07-15 17:45:03,414:INFO: Drehmoment berechnet.
+2026-07-15 17:45:03,414:INFO: Motorstrom berechnet.
+2026-07-15 17:45:03,414:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:03,414:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:03,414:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:03,414:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:03,414:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:03,443:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:03,443:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:03,472:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:03,705:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:03,853:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:03,853:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:03,853:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:03,855:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:03,856:INFO: Simulation gestartet.
+2026-07-15 17:45:03,856:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:03,857:INFO: Konstanten initialisiert.
+2026-07-15 17:45:03,857:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:03,859:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:03,859:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:03,859:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:03,860:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:03,861:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:03,862:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:03,862:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:03,863:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:03,863:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:03,865:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:03,866:INFO: Strecke berechnet.
+2026-07-15 17:45:03,866:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:03,868:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:03,871:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:03,872:INFO: Luftdichte berechnet.
+2026-07-15 17:45:03,874:INFO: Kräfte berechnet.
+2026-07-15 17:45:03,875:INFO: Leistung berechnet.
+2026-07-15 17:45:03,875:INFO: Drehmoment berechnet.
+2026-07-15 17:45:03,876:INFO: Motorstrom berechnet.
+2026-07-15 17:45:03,876:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:03,876:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:03,876:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:03,876:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:03,876:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:03,913:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:03,914:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:03,964:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:04,220:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:04,319:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:04,319:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:04,319:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:04,320:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:04,320:INFO: Simulation gestartet.
+2026-07-15 17:45:04,320:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:04,320:INFO: Konstanten initialisiert.
+2026-07-15 17:45:04,320:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:04,321:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:04,321:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:04,321:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:04,322:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:04,322:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:04,324:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:04,324:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:04,325:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:04,326:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:04,327:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:04,328:INFO: Strecke berechnet.
+2026-07-15 17:45:04,329:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:04,330:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:04,331:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:04,331:INFO: Luftdichte berechnet.
+2026-07-15 17:45:04,332:INFO: Kräfte berechnet.
+2026-07-15 17:45:04,332:INFO: Leistung berechnet.
+2026-07-15 17:45:04,332:INFO: Drehmoment berechnet.
+2026-07-15 17:45:04,333:INFO: Motorstrom berechnet.
+2026-07-15 17:45:04,333:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:04,333:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:04,333:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:04,333:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:04,333:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:04,400:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:04,401:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:04,439:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:04,580:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:04,678:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:04,678:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:04,678:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:04,679:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:04,679:INFO: Simulation gestartet.
+2026-07-15 17:45:04,679:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:04,679:INFO: Konstanten initialisiert.
+2026-07-15 17:45:04,680:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:04,680:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:04,680:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:04,680:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:04,682:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:04,682:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:04,684:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:04,684:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:04,685:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:04,685:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:04,686:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:04,686:INFO: Strecke berechnet.
+2026-07-15 17:45:04,687:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:04,688:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:04,689:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:04,689:INFO: Luftdichte berechnet.
+2026-07-15 17:45:04,690:INFO: Kräfte berechnet.
+2026-07-15 17:45:04,690:INFO: Leistung berechnet.
+2026-07-15 17:45:04,690:INFO: Drehmoment berechnet.
+2026-07-15 17:45:04,691:INFO: Motorstrom berechnet.
+2026-07-15 17:45:04,691:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:04,691:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:04,691:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:04,691:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:04,691:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:04,723:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:04,723:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:04,754:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:04,845:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:04,932:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:04,932:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:04,932:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:04,934:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:04,934:INFO: Simulation gestartet.
+2026-07-15 17:45:04,934:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:04,934:INFO: Konstanten initialisiert.
+2026-07-15 17:45:04,934:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:04,936:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:04,936:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:04,936:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:04,938:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:04,938:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:04,940:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:04,940:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:04,940:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:04,941:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:04,941:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:04,942:INFO: Strecke berechnet.
+2026-07-15 17:45:04,942:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:04,943:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:04,944:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:04,944:INFO: Luftdichte berechnet.
+2026-07-15 17:45:04,945:INFO: Kräfte berechnet.
+2026-07-15 17:45:04,945:INFO: Leistung berechnet.
+2026-07-15 17:45:04,945:INFO: Drehmoment berechnet.
+2026-07-15 17:45:04,946:INFO: Motorstrom berechnet.
+2026-07-15 17:45:04,946:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:04,946:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:04,946:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:04,946:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:04,946:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:04,973:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:04,973:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,004:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:05,100:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:05,183:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:05,184:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:05,184:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:05,185:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:05,186:INFO: Simulation gestartet.
+2026-07-15 17:45:05,186:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:05,186:INFO: Konstanten initialisiert.
+2026-07-15 17:45:05,186:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:05,187:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:05,188:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:05,188:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:05,190:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:05,190:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:05,192:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:05,192:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:05,193:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:05,194:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:05,195:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:05,195:INFO: Strecke berechnet.
+2026-07-15 17:45:05,196:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:05,197:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:05,198:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:05,198:INFO: Luftdichte berechnet.
+2026-07-15 17:45:05,199:INFO: Kräfte berechnet.
+2026-07-15 17:45:05,199:INFO: Leistung berechnet.
+2026-07-15 17:45:05,200:INFO: Drehmoment berechnet.
+2026-07-15 17:45:05,200:INFO: Motorstrom berechnet.
+2026-07-15 17:45:05,200:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:05,200:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:05,200:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:05,200:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:05,200:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,231:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:05,231:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,263:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:05,350:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:05,441:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:05,441:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:05,441:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:05,442:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:05,442:INFO: Simulation gestartet.
+2026-07-15 17:45:05,442:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:05,442:INFO: Konstanten initialisiert.
+2026-07-15 17:45:05,442:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:05,443:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:05,443:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:05,443:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:05,444:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:05,444:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:05,445:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:05,446:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:05,446:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:05,447:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:05,447:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:05,447:INFO: Strecke berechnet.
+2026-07-15 17:45:05,448:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:05,449:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:05,449:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:05,450:INFO: Luftdichte berechnet.
+2026-07-15 17:45:05,450:INFO: Kräfte berechnet.
+2026-07-15 17:45:05,451:INFO: Leistung berechnet.
+2026-07-15 17:45:05,451:INFO: Drehmoment berechnet.
+2026-07-15 17:45:05,451:INFO: Motorstrom berechnet.
+2026-07-15 17:45:05,451:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:05,451:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:05,451:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:05,451:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:05,451:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,482:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:05,482:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,510:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:05,595:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:05,674:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:05,674:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:05,674:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:05,675:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:05,675:INFO: Simulation gestartet.
+2026-07-15 17:45:05,675:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:05,676:INFO: Konstanten initialisiert.
+2026-07-15 17:45:05,676:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:05,676:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:05,676:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:05,676:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:05,678:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:05,678:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:05,679:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:05,679:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:05,680:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:05,680:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:05,681:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:05,681:INFO: Strecke berechnet.
+2026-07-15 17:45:05,682:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:05,682:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:05,683:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:05,683:INFO: Luftdichte berechnet.
+2026-07-15 17:45:05,684:INFO: Kräfte berechnet.
+2026-07-15 17:45:05,684:INFO: Leistung berechnet.
+2026-07-15 17:45:05,684:INFO: Drehmoment berechnet.
+2026-07-15 17:45:05,685:INFO: Motorstrom berechnet.
+2026-07-15 17:45:05,685:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:05,685:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:05,685:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:05,685:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:05,685:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,713:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:05,713:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,739:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:05,833:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:05,914:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:05,914:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:05,914:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:05,915:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:05,916:INFO: Simulation gestartet.
+2026-07-15 17:45:05,916:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:05,916:INFO: Konstanten initialisiert.
+2026-07-15 17:45:05,916:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:05,916:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:05,916:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:05,916:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:05,918:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:05,918:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:05,919:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:05,919:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:05,920:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:05,921:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:05,921:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:05,921:INFO: Strecke berechnet.
+2026-07-15 17:45:05,922:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:05,923:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:05,923:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:05,924:INFO: Luftdichte berechnet.
+2026-07-15 17:45:05,924:INFO: Kräfte berechnet.
+2026-07-15 17:45:05,925:INFO: Leistung berechnet.
+2026-07-15 17:45:05,925:INFO: Drehmoment berechnet.
+2026-07-15 17:45:05,925:INFO: Motorstrom berechnet.
+2026-07-15 17:45:05,925:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:05,925:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:05,925:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:05,925:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:05,925:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,951:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:05,951:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:05,978:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:06,059:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:06,140:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:06,140:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:06,141:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:06,142:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:06,142:INFO: Simulation gestartet.
+2026-07-15 17:45:06,142:INFO: Eingabedaten erfolgreich geprüft.
+2026-07-15 17:45:06,142:INFO: Konstanten initialisiert.
+2026-07-15 17:45:06,142:INFO: Starte Glättung der GPS Daten.
+2026-07-15 17:45:06,143:INFO: GPS-Daten erfolgreich geglättet.
+2026-07-15 17:45:06,143:INFO: GPS-Daten geglättet.
+2026-07-15 17:45:06,143:INFO: Berechne Himmelsrichtung.
+2026-07-15 17:45:06,144:INFO: Himmelsrichtung erfolgreich berechnet.
+2026-07-15 17:45:06,145:INFO: Himmelsrichtung berechnet.
+2026-07-15 17:45:06,146:INFO: Zeitdaten berechnet.
+2026-07-15 17:45:06,146:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:06,146:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:06,147:INFO: Starte Haversine-Berechnung.
+2026-07-15 17:45:06,147:INFO: Haversine-Berechnung erfolgreich.
+2026-07-15 17:45:06,148:INFO: Strecke berechnet.
+2026-07-15 17:45:06,148:INFO: Geschwindigkeit berechnet.
+2026-07-15 17:45:06,149:INFO: Beschleunigung berechnet.
+2026-07-15 17:45:06,150:INFO: Steigungswinkel berechnet.
+2026-07-15 17:45:06,150:INFO: Luftdichte berechnet.
+2026-07-15 17:45:06,151:INFO: Kräfte berechnet.
+2026-07-15 17:45:06,151:INFO: Leistung berechnet.
+2026-07-15 17:45:06,151:INFO: Drehmoment berechnet.
+2026-07-15 17:45:06,151:INFO: Motorstrom berechnet.
+2026-07-15 17:45:06,151:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:06,151:INFO: BatteryPack erfolgreich initialisiert.
+2026-07-15 17:45:06,151:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:06,151:INFO: BatterySimulator erfolgreich initialisiert.
+2026-07-15 17:45:06,151:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:06,177:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:06,177:INFO: Starte Simulation des Ladezustands
+2026-07-15 17:45:06,205:INFO: Simulation beendet. 2284 Werte verarbeitet.
+2026-07-15 17:45:06,287:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_lifepo.png' gespeichert.
+2026-07-15 17:45:06,367:INFO: Plot des Ladezustands wurde erfolgreich als 'SOC_nmc.png' gespeichert.
+2026-07-15 17:45:06,367:INFO: Simulation erfolgreich beendet.
+2026-07-15 17:45:06,367:INFO: Starte Berechnung der Kenngrößen.
+2026-07-15 17:45:06,368:INFO: Kenngrößen erfolgreich berechnet.
+2026-07-15 17:45:06,522:INFO: Parameterstudie erfolgreich abgeschlossen.
