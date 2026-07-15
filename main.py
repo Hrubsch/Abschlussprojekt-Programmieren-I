@@ -394,6 +394,17 @@ def reverse_goecoding(df : pd.DataFrame) -> list[str]:
             # Fängt unerwartete Fehler innerhalb der Schleife ab, damit das Skript nicht abstürzt
             logging.error(f"Unerwarteter Fehler bei der Verarbeitung von Index {idx}: {e}", exc_info=True) # exc_info=True (bei Fehler wird Zeilennummer des Fehlers in Log geschrieben)
             continue
+        # Speichern der durchfahrenen Orte als .txt Datei
+        
+    try:
+        datei_name = "durchfahrene_orte.txt"
+        with open(datei_name, "w", encoding="utf-8") as f: # with .. as f Datei wird automatisch wieder gedchlossen; open(datei_name,..) ... öffnen der Datei; w ... write; encoding="utf-8" ... auch Umlaute können geschrieben werden
+            for ort in liste_orte:
+                f.write(f"{ort}\n") # \n ... Zeilenumbruch
+        logging.info(f"Orte erfolgreich in {datei_name} exportiert.")
+        print(f"Orte erfolgreich in '{datei_name}' gespeichert.")
+    except Exception as e:
+        logging.error(f"Fehler beim Schreiben der TXT-Datei: {e}")
 
     logging.info(f"Reverse Geocoding erfolgreich beendet")
     return liste_orte
