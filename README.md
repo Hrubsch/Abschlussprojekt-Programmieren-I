@@ -36,7 +36,7 @@ Folgen Sie diesen Schritten, um das Projekt auf deinem lokalen System einzuricht
 ### 1. Repository klonen
 * Terminal öffnen und Projekt von GitHub herunterladen/clonen:
 * ```bash
-  git clone [https://github.com/Hrubsch/Abschlussprojekt-Programmieren-I](https://github.com/Hrubsch/Abschlussprojekt-Programmieren-I)
+  git clone https://github.com/Hrubsch/Abschlussprojekt-Programmieren-I
   cd Abschlussprojekt-Programmieren-I
 
 ### 2. Benötigte Pakete installieren
